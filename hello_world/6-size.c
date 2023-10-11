@@ -15,15 +15,15 @@ int main(void)
 
 	float floatType;
 
-	printf("Size of a char:%zu", sizeof(charType));
+	printf("Size of a char: %zu\n", sizeof(charType));
 
-	printf("Size of a int:%zu", sizeof(intType));
+	printf("Size of a int: %zu\n", sizeof(intType));
 
-	printf("Size of a long int:%zu", sizeof(intType));
+	printf("Size of a long int: %zu\n", sizeof(intType));
 
-	printf("Size of a long long int:%zu", sizeof(longLongIntType));
+	printf("Size of a long long int: %zu\n", sizeof(longLongIntType));
 
-	printf("Size of a float:%zu", sizeof(floatType));
+	printf("Size of a float: %zu\n", sizeof(floatType));
 
 	return (0);
 
