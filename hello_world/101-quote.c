@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include <sys/syscall.h>
+#include <sys.syscall.h>
 
 int main()
 {
@@ -8,4 +8,3 @@ int main()
 	syscall(SYS_write, 1, msg, sizeof(msg));
 
 	return (1);
-}
