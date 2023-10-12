@@ -9,3 +9,4 @@ int main()
 	syscall(SYS_write, 1, msg, sizeof(msg));
 
 	return (1);
+}
