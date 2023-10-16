@@ -11,11 +11,11 @@ int main(void)
 
 	char n;
 
-	for (n = 0; n <= 16; ++n)
+	for (n = 0; n <= 15; ++n)
 	{
 		if (n <= 9)
 		{
-			putchar(n);
+			putchar("0" + n);
 		}
 		else
 		{
