@@ -1,16 +1,12 @@
 #include "main.h"
-
+#include <stdio>
 /**
- * 
- * main - Print text
+ * print_alphabet - calls _putchar
  *
- * Return: Always 0 (Success)
+ * Return: void
  */
 
-int main(void)
+void print_alphabet(void)
 {
-
-	print_alphabet();
-
-	return (0);
+	printf("%d", 32)
 }
