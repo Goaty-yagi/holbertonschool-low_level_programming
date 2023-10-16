@@ -12,12 +12,12 @@ int main(void)
 	char text[] = "_putchar";
 	int i;
 
-	for (i = 0; i < strlen(text); i++)
+	for (i = 0; i < 8; i++)
 	{
-		putchar('text[i]')
+		putchar(text[i]);
 	}
 
-	putchar('\n')
+	putchar('\n');
 
 	return (0);
 }
