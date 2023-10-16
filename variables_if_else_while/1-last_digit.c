@@ -21,17 +21,17 @@ int main(void)
 
 	n = rand() - RAND_MAX / 2;
 
-	lastDegit = n % 10;
+	lastDigit = n % 10;
 
-	if (n > 5)
+	if (lastDigit > 5)
 	{
-		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, gFive);
-	} else if (n < 6)
+		printf("%s %d %s %d %s\n", text, n, "is", lastDigit, gFive);
+	} else if (lastDigit < 6)
 	{
-		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, lSix);
+		printf("%s %d %s %d %s\n", text, n, "is", lastDigit, lSix);
 	} else
 	{
-		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, "and is 0");
+		printf("%s %d %s %d %s\n", text, n, "is", lastDigit, "and is 0");
 	}
 
 	return (0);
