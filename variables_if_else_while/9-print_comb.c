@@ -17,7 +17,7 @@ int main(void)
 		if (n != 9)
 		{
 			putchar(44);
-			putchar(27);
+			putchar(32);
 		};
 	};
 
