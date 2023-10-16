@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
  * 
  * main - Print text
@@ -10,6 +9,7 @@
 void print_alphabet(void)
 {
 	putchar(97);
+
 }
 
 int main(void)
