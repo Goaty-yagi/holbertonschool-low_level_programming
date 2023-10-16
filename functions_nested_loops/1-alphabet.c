@@ -1,6 +1,8 @@
 #include <stdio.h>
+void print_alphabet();
 
 /**
+ * 
  * main - Print text
  *
  * Return: Always 0 (Success)
@@ -16,6 +18,8 @@ void print_alphabet()
 	};
 
 	putchar('\n');
+
+	return (0);
 }
 
 int main(void)
