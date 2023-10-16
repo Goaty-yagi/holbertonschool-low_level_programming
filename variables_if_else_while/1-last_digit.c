@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include <stdbool.h>
 /**
  * main - print a text based on n
  *
@@ -24,15 +23,15 @@ int main(void)
 
 	lastDegit = n % 10;
 
-	if (n == false)
-	{
-		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, "and is 0");
-	} else if (n > 5)
+	if (n > 5)
 	{
 		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, gFive);
-	} else
+	} else if (n < 6)
 	{
 		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, lSix);
+	} else
+	{
+		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, "and is 0");
 	}
 
 	return (0);
