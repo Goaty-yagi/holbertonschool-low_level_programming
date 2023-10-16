@@ -31,7 +31,7 @@ int main(void)
 		printf("%s %d %s %d %s\n", text, n, "is", lastDigit, "and is 0");
 	} else
 	{
-		printf("%s %d %s %d %s\n", text, n, "is", lastDigit, LSix);
+		printf("%s %d %s %d %s\n", text, n, "is", lastDigit, lSix);
 	}
 
 	return (0);
