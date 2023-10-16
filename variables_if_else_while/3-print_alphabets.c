@@ -9,7 +9,7 @@
 int main(void)
 {
 
-	char c C;
+	char c, C;
 
 	for (c = 'a'; c <= 'z'; ++c)
 	{
@@ -18,8 +18,8 @@ int main(void)
 
 	for (C = 'A'; C <= 'Z'; ++C)
 	{
-		purchar(C)
-	}
+		purchar(C);
+	};
 
 	putchar('\n');
 
