@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int n, lastDegit;
+	int n, lastDigit;
 
 	char text[] = "Last digit of";
 
