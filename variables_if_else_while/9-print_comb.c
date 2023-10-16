@@ -16,6 +16,7 @@ int main(void)
 		putchar('0' + n);
 		if (n != 9)
 		{
+			putchar(10);
 			putchar(44);
 		};
 	};
