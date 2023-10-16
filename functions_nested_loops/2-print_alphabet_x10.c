@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - Print text
+ * print_alphabet_x10 - calls _putchar
  *
- * Return: Always 0 (Success)
+ * Return: void
  */
 
 void print_alphabet_x10(void)
