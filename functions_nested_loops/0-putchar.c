@@ -8,7 +8,13 @@
 
 int main(void)
 {
-	putchar("_putchar");
+	char text[] = "_putchar";
+	for (a = 0; a < strlen(text); a++)
+	{
+		putchar('text[i]')
+	}
+
+	putchar('\n')
 
 	return (0);
 }
