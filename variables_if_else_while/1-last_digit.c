@@ -15,7 +15,7 @@ int main(void)
 
 	char gFive[] = "and is greater than 5";
 
-	char lSix[] = "and is less than 6 and not 0"; 
+	char lSix[] = "and is less than 6 and not 0";
 
 	srand(time(0));
 
@@ -23,12 +23,12 @@ int main(void)
 
 	lastDegit = n % 10;
 
-	if (n > 5)
-	{
-		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, gFive);
-	} else if (n == 0)
+	if (n == 0)
 	{
 		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, "and is 0");
+	} else if (n > 5)
+	{
+		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, gFive);
 	} else
 	{
 		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, lSix);
