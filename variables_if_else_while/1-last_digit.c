@@ -23,7 +23,7 @@ int main(void)
 
 	lastDegit = n % 10;
 
-	if (false)
+	if (n == false)
 	{
 		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, "and is 0");
 	} else if (n > 5)
