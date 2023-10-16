@@ -3,6 +3,7 @@
 
 /**
  *  _isalpha - calls _isalpha
+ *  @c: any int
  *
  * Return: check if parameter is alphabet
  */
