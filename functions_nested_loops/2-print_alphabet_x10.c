@@ -1,14 +1,20 @@
 #include "main.h"
 
+/**
+ * main - Print text
+ *
+ * Return: Always 0 (Success)
+ */
+
 void print_alphabet_x10(void)
 {
 	char text[] = "abcdefghijklmnopqrstuvwxyz";
 
 	int n, i;
 
-	for (n = 0; n > 10; n++)
+	for (n = 0; n < 10; n++)
 	{
-		for (i = 0; i > 26; i++)
+		for (i = 0; i < 26; i++)
 		{
 			_putchar(text[i]);
 		}
