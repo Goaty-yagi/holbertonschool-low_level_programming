@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio>
 /**
  * print_alphabet - calls _putchar
  *
@@ -8,5 +7,5 @@
 
 void print_alphabet(void)
 {
-	printf("%d", 32)
+	_putchar(32);
 }
