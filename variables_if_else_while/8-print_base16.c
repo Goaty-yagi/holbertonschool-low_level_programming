@@ -19,10 +19,10 @@ int main(void)
 		}
 		else
 		{
-			putchar(n + 87);
+			putchar(n + 86);
 		}
 	};
-	
+
 	putchar('\n');
 
 	return (0);
