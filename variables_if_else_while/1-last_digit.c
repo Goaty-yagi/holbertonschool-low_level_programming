@@ -26,12 +26,12 @@ int main(void)
 	if (lastDigit > 5)
 	{
 		printf("%s %d %s %d %s\n", text, n, "is", lastDigit, gFive);
-	} else if (lastDigit < 6)
-	{
-		printf("%s %d %s %d %s\n", text, n, "is", lastDigit, lSix);
-	} else
+	} else if (lastDigit == 0)
 	{
 		printf("%s %d %s %d %s\n", text, n, "is", lastDigit, "and is 0");
+	} else
+	{
+		printf("%s %d %s %d %s\n", text, n, "is", lastDigit, LSix);
 	}
 
 	return (0);
