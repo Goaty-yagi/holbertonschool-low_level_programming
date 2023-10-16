@@ -3,7 +3,7 @@
 
 /**
  * _islower - calls _islower
- * @parameterc: charcter integer from ascii table
+ * @c: charcter integer from ascii table
  *
  * Return: check if parameter is lower case
  */
