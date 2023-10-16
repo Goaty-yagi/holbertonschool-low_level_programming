@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - print a text based on n
@@ -9,7 +10,9 @@
 int main(void)
 {
 	char text[] = "_putchar";
-	for (a = 0; a < strlen(text); a++)
+	int i;
+
+	for (i = 0; i < strlen(text); i++)
 	{
 		putchar('text[i]')
 	}
