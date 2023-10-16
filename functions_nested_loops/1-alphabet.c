@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * 
  * main - Print text
@@ -14,7 +15,6 @@ int _putchar(char c)
 void print_alphabet(void)
 {
 	_putchar(97);
-
 }
 
 int main(void)
