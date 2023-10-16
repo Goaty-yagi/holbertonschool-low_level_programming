@@ -18,7 +18,7 @@ int main(void)
 
 	for (C = 'A'; C <= 'Z'; ++C)
 	{
-		purchar(C);
+		putchar(C);
 	};
 
 	putchar('\n');
