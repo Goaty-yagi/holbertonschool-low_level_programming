@@ -10,7 +10,7 @@
 int main(void)
 {
 
-	print_alphabet();
+	putchar(print_alphabet());
 
 	return (0);
 }
