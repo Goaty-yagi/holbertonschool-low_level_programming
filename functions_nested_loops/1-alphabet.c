@@ -6,7 +6,7 @@
  * Return: Always 0 (Success)
  */
 
-void print_alphabet(void)
+void print_alphabet()
 {
 	char c;
 
@@ -20,6 +20,6 @@ void print_alphabet(void)
 
 int main(void)
 {
-	print_alphabet()
+	print_alphabet();
 	return (0);
 }
