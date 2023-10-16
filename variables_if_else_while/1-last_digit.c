@@ -10,6 +10,8 @@
 int main(void)
 {
 	int n, lastDegit;
+
+	char text[] = "Last degit of";
 	
 	srand(time(0));
 	
@@ -17,17 +19,15 @@ int main(void)
 
 	lastDegit = n % 10;
 
-	char text[] = "Last digit of";
-
 	if (n > 5)
 	{
-		printf("%s %d %s\n", text, n, "and is greater than 5");
+		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, "and is greater than 5");
 	} else if (n == 0)
 	{
-		printf("%s %d %s\n", text, n, "and is 0");
+		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, "and is 0");
 	} else
 	{
-		printf("%s %d %s\n", text, n, "and is less than 6 and not 0");
+		printf("%s %d %s %d %s\n", text, n, "is", lastDegit, "and is less than 6 and not 0");
 	}
 
 	return (0);
