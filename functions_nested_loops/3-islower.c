@@ -4,7 +4,7 @@
 /**
  * _islower - calls _islower
  *
- * Return: check lower case
+ * Return: check if parameter is lower case
  */
 
 int _islower(int c)
