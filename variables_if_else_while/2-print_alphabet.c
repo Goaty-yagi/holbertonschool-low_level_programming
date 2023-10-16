@@ -16,7 +16,7 @@ int main(void)
 		putchar(c);
 	};
 
-	putchar("\n");
+	putchar("LF");
 
 	return (0);
 
