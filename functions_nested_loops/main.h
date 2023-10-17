@@ -23,6 +23,8 @@ void twoDigitNum(int n);
 
 void oneDigitNum(int n);
 
+int add(int i, int n);
+
 int _putchar(char c);
 
 #endif
