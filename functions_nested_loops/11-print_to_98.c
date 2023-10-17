@@ -28,7 +28,7 @@ void print_to_98(int n)
 			n++;
 		}
 
-		if i(stop == 0)
+		if (stop == 0)
 		{
 			printf("%s", ", ");
 		}
