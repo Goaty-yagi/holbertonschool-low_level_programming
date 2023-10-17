@@ -3,12 +3,12 @@
 
 /**
  * _abs - calls _abs
- * @int: any int
+ * @n: any int
  *
  * Return: void
  */
 
-int _abs(int)
+int _abs(int, n)
 {
 	int an = abs(int);
 	_putchar('0' + an);
