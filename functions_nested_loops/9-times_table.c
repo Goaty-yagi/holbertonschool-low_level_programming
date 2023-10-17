@@ -1,4 +1,6 @@
 #include "main.h"
+void twoDigitNum(int n);
+void oneDigitNum(int n);
 
 /**
  * times_table - calls times_table
@@ -54,5 +56,6 @@ void times_table(void)
 				}
 			}
 		_putchar('\n');
+		}
 	}
 }
