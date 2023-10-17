@@ -21,20 +21,20 @@ void times_table(void)
 			}
 			else
 			{
-				_putcher(44);
-				_putcher(32);
+				_putchar(44);
+				_putchar(32);
 				if (a >= 9)
 				{
-					_putcher(32);
-					_putcher('0' + a);
+					_putchar(32);
+					_putchar('0' + a);
 				}
 				else
 				{
-					_putcher('0' + a / 10);
-					_putcher('0' + a % 10);
+					_putchar('0' + a / 10);
+					_putchar('0' + a % 10);
 				}
 			}
 		}
-		_putcher('\n');
+		_putchar('\n');
 	}
 }
