@@ -13,7 +13,7 @@ void print_to_98(int n)
 	int stop = 0;
 	while (stop != 1)
 	{
-		printf("Test %d", n);
+		printf("%d", n);
 		if (n == 98)
 		{
 			stop = 1;
@@ -29,7 +29,7 @@ void print_to_98(int n)
 
 		if (stop == 0)
 		{
-			printf("%s", ", ");
+			printf(", ");
 		}
 	}
 }
