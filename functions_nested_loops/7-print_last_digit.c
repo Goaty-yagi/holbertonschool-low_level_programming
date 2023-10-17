@@ -14,6 +14,6 @@ int print_last_digit(int n)
 
 	int abNum = abs(lastDigit);
 
-	return (abNumabNum);
+	return (abNum, abNum);
 
 }
