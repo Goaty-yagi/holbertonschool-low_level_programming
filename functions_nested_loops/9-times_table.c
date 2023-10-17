@@ -5,7 +5,7 @@
  *
  * Return: void
  */
-int twoDigitNum(int n)
+void twoDigitNum(int n)
 {
 	_putchar(44);
 	_putchar(32);
@@ -13,7 +13,7 @@ int twoDigitNum(int n)
 	_putchar('0' + n % 10);
 }
 
-int oneDigitNum(int n)
+void oneDigitNum(int n)
 {
 	_putchar(44);
 	_putchar(32);
@@ -34,7 +34,7 @@ void times_table(void)
 			{
 				if(n == 0)
 				{
-					_putchar('0', 0)
+					_putchar('0', 0);
 				}
 				else
 				{
