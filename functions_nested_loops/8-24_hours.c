@@ -19,7 +19,7 @@ void jack_bauer(void)
 		}
 		else
 		{
-			_putchar('0' + hour); 
+			_putchar('0' + hour);
 		}
 		_putchar(58);
 		for (min = 0; min < 59; min++)
@@ -33,6 +33,7 @@ void jack_bauer(void)
 			{
 				_putchar('0' + min);
 			}
+			_putchar('\n');
 		}
 	}
 }
