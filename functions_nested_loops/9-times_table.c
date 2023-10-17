@@ -5,6 +5,21 @@
  *
  * Return: void
  */
+int twoDigitNum(int n)
+{
+	_putchar(44);
+	_putchar(32);
+	_putchar('0' + n / 10);
+	_putchar('0' + n % 10);
+}
+
+int oneDigitNum(int n)
+{
+	_putchar(44);
+	_putchar(32);
+	_putchar(32);
+	_putchar('0' + n);
+}
 
 void times_table(void)
 {
@@ -15,28 +30,29 @@ void times_table(void)
 		for (n = 0; n <= 9; n++)
 		{
 			a = n * i;
-			if (a <= 9)
+			if (i == 0)
 			{
-				_putchar('0' + a);
+				if(n == 0)
+				{
+					_putchar('0', 0)
+				}
+				else
+				{
+					oneDigitNum(a);
+				}
+
 			}
 			else
 			{
-				_putchar('0' + a / 10);
-				_putchar('0' + a % 10);
+				if (a <= 9)
+				{
+					oneDigitNum(a);
+				}
+				else
+				{
+					twoDigitNum(a);
+				}
 			}
-
-			_putchar(44);
-
-			if (a <= 9)
-			{
-				_putchar(32);
-				_putchar(32);
-			}
-			else
-			{
-				_putchar(32);
-			}
-		}
 		_putchar('\n');
 	}
 }
