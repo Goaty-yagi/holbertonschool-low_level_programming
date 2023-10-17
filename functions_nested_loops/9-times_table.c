@@ -1,27 +1,10 @@
 #include "main.h"
-void twoDigitNum(int n);
-void oneDigitNum(int n);
 
 /**
  * times_table - calls times_table
  *
  * Return: void
  */
-void twoDigitNum(int n)
-{
-	_putchar(44);
-	_putchar(32);
-	_putchar('0' + n / 10);
-	_putchar('0' + n % 10);
-}
-
-void oneDigitNum(int n)
-{
-	_putchar(44);
-	_putchar(32);
-	_putchar(32);
-	_putchar('0' + n);
-}
 
 void times_table(void)
 {
@@ -40,7 +23,10 @@ void times_table(void)
 				}
 				else
 				{
-					oneDigitNum(a);
+					_putchar(44);
+					_putchar(32);
+					_putchar(32):
+					_putchar('0' + a);
 				}
 
 			}
@@ -48,11 +34,17 @@ void times_table(void)
 			{
 				if (a <= 9)
 				{
-					oneDigitNum(a);
+					_putchar(44);
+					_putchar(32);
+					_putchar(32);
+					_putchar('0' + a);
 				}
 				else
 				{
-					twoDigitNum(a);
+					_putchar(44);
+					_putchar(32);
+					_putchar('0' + a / 10);
+					_putchar('0' + a % 10);
 				}
 			}
 		_putchar('\n');
