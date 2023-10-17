@@ -5,7 +5,7 @@
  * _abs - calls _abs
  * @n: any int
  *
- * Return: void
+ * Return: 0
  */
 
 int _abs(int n)
@@ -13,5 +13,7 @@ int _abs(int n)
 	int an = abs(n);
 
 	_putchar('0' + an);
+
+	return (0);
 
 }
