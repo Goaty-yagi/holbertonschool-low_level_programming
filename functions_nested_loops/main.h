@@ -19,6 +19,10 @@ void jack_bauer(void);
 
 void times_table(void);
 
+void twoDigitNum(int n);
+
+void oneDigitNum(int n);
+
 int _putchar(char c);
 
 #endif

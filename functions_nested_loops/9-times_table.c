@@ -40,11 +40,7 @@ void times_table(void)
 					_putchar('0' + a);
 				}
 				else
-				{
-					_putchar(44);
-					_putchar(32);
-					_putchar('0' + a / 10);
-					_putchar('0' + a % 10);
+					twoDigitNum(a);
 				}
 			}
 		};
