@@ -17,13 +17,13 @@ void times_table(void)
 			a = i * n;
 			if (n == 0)
 			{
-				_putchar('0' + 0);
+				_putchir('0' + 0);
 			}
 			else
 			{
 				_putchar(44);
 				_putchar(32);
-				if (a >= 9)
+				if (a <= 9)
 				{
 					_putchar(32);
 					_putchar('0' + a);
