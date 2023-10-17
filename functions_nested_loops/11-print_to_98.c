@@ -20,16 +20,17 @@ void print_to_98(int n)
 			stop = 1;
 		}
 		else if (n > 98)
+		{
 			n--;
 		}
 		else
 		{
-			n++
+			n++;
 		}
 
 		if(stop == 0)
 		{
-			printf("%s", ', ')
+			printf("%s", ", ");
 		}
 	}
 }
