@@ -12,8 +12,6 @@ int print_last_digit(int n)
 {
 	int lastDigit = n % 10;
 
-	int abNum = abs(lastDigit);
-
-	return (abNum, abNum);
+	return (abs(lastDigit));
 
 }
