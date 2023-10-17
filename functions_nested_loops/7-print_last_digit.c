@@ -12,14 +12,7 @@ int print_last_digit(int n)
 {
 	int lastDigit;
 
-	if (isalpha(n))
-	{
-		lastDigit = n - '0';
-	}
-	else
-	{
-		lastDigit = n % 10;
-	}
+	lastDigit = n % 10;
 
 	return (lastDigit);
 
