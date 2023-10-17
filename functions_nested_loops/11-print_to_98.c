@@ -11,11 +11,10 @@
 void print_to_98(int n)
 {
 	int stop = 0;
-
+	printf("TTT")
 	while (stop == 1)
 	{
-		_putchar(n);
-		printf("%d", n);
+		printf("Test %d", n);
 		if (n == 98)
 		{
 			stop = 1;
@@ -29,7 +28,7 @@ void print_to_98(int n)
 			n++;
 		}
 
-		if(stop == 0)
+		if i(stop == 0)
 		{
 			printf("%s", ", ");
 		}
