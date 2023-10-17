@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - calls _islower
+ * add - calls add
  * @i: first int
  * @n: second int
  *
