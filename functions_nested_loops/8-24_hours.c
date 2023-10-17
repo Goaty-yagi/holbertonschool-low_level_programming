@@ -27,13 +27,13 @@ void jack_bauer(void)
 			if (min <= 9)
 			{
 				_putchar('0' + 0);
-				-putchar('0' + min);
+				_putchar('0' + min);
 			}
 			else
 			{
-				_putchar('0' + min)
+				_putchar('0' + min);
 			}
-			_putchar('\n')
+			_putchar('\n');
 		
 		}
 	}
