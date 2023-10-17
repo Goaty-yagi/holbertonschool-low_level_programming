@@ -11,9 +11,11 @@
 void print_to_98(int n)
 {
 	int stop = 0;
+
 	while (stop != 1)
 	{
 		printf("%d", n);
+
 		if (n == 98)
 		{
 			stop = 1;
@@ -32,4 +34,5 @@ void print_to_98(int n)
 			printf(", ");
 		}
 	}
+	putchar('\n';)
 }
