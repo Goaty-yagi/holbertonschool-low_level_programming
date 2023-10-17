@@ -14,12 +14,12 @@ int print_last_digit(int n)
 
 	if (isalpha(n))
 	{
-		lastDigit = _purchar(n);
+		lastDigit = n - '0'
 	}
 	else
 	{
+		lastDigit = n % 10;
 	}
-	int lastDigit = n % 10;
 
 	return (lastDigit);
 
