@@ -14,38 +14,27 @@ void times_table(void)
 	{
 		for (n = 0; n <= 9; n++)
 		{
-			a = n * i;
+			a = i * n;
 			if (n == 0)
 			{
-				if (n == 0)
-				{
-					_putchar('0' + 0);
-				}
-				else
-				{
-					_putchar(44);
-					_putchar(32);
-					_putchar(32);
-					_putchar('0' + a);
-				}
-
+				putchar('0' + 0);
 			}
 			else
 			{
-				if (a <= 9)
+				putcher(44);
+				putcher(32);
+				if (a >= 9)
 				{
-					_putchar(44);
-					_putchar(32);
-					_putchar(32);
-					_putchar('0' + a);
+					putcher(32);
+					putcher('0' + a);
 				}
 				else
 				{
-					twoDigitNum(a);
+					putcher('0' + a / 10);
+					putcher('0' + a % 10);
 				}
 			}
-		};
-
-		_putchar('\n');
+		}
+		putcher('\n');
 	}
 }
