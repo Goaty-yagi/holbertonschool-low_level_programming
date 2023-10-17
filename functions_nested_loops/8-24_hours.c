@@ -6,9 +6,10 @@
  * Return: void
  */
 
+
 void jack_bauer(void)
 {
-	int hour, min;
+	int hour, min, fh, lh, fm, lm;
 
 	for (hour = 0; hour < 23; hour++)
 	{
@@ -21,7 +22,8 @@ void jack_bauer(void)
 			}
 			else
 			{
-				_putchar('0' + hour);
+				_putchar('0' + hour / 10);
+				_putchar('0' + hour % 10);
 			}
 			_putchar(58);
 			if (min <= 9)
@@ -31,7 +33,8 @@ void jack_bauer(void)
 			}
 			else
 			{
-				_putchar('0' + min);
+				_putchar('0' + min / 10);
+				_putchar('0' + min % 10);
 			}
 			_putchar('\n');
 		
