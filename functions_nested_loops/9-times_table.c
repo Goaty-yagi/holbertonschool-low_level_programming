@@ -40,6 +40,7 @@ void times_table(void)
 					_putchar('0' + a);
 				}
 				else
+				{
 					twoDigitNum(a);
 				}
 			}
