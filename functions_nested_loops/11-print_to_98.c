@@ -11,8 +11,7 @@
 void print_to_98(int n)
 {
 	int stop = 0;
-	printf("TTT");
-	while (stop == 1)
+	while (stop != 1)
 	{
 		printf("Test %d", n);
 		if (n == 98)
