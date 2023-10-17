@@ -3,7 +3,7 @@
 
 /**
  * print_last_digit - calls print_last_digit
- * @c: any int
+ * @n: any int
  *
  * Return: last digit of param
  */
