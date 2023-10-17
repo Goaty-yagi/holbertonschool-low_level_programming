@@ -8,7 +8,7 @@
  * Return: void
  */
 
-int _abs(int, n)
+int _abs(int n)
 {
 	int an = abs(int);
 	_putchar('0' + an);
