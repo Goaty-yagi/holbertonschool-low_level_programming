@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h> 
+#include <stdio.h>
 
 /**
  * print_last_digit - calls print_last_digit
@@ -13,11 +13,11 @@ int print_last_digit(int n)
 {
 	int lastDigit = n % 10;
 
-	int abNum = abs(lasrDigit);
+	int abNum = abs(lastDigit);
 
-	char stNum, wString;
+	char stNum;
 
-	sprintf(stNum, "%d", stNum);
+	sprintf(stNum, "%d", abNum);
 
 	return (stNum + stNum);
 
