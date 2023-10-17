@@ -17,24 +17,24 @@ void times_table(void)
 			a = i * n;
 			if (n == 0)
 			{
-				putchar('0' + 0);
+				_putchar('0' + 0);
 			}
 			else
 			{
-				putcher(44);
-				putcher(32);
+				_putcher(44);
+				_putcher(32);
 				if (a >= 9)
 				{
-					putcher(32);
-					putcher('0' + a);
+					_putcher(32);
+					_putcher('0' + a);
 				}
 				else
 				{
-					putcher('0' + a / 10);
-					putcher('0' + a % 10);
+					_putcher('0' + a / 10);
+					_putcher('0' + a % 10);
 				}
 			}
 		}
-		putcher('\n');
+		_putcher('\n');
 	}
 }
