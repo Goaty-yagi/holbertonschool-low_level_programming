@@ -14,7 +14,7 @@ int print_last_digit(int n)
 
 	if (isalpha(n))
 	{
-		lastDigit = n - '0'
+		lastDigit = n - '0';
 	}
 	else
 	{
