@@ -6,7 +6,7 @@
  * @a: first int
  * @b: second int
  *
- * Return: multiplies two ints 
+ * Return: multiplies two ints
  */
 
 int mul(int a, int b)
