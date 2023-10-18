@@ -14,10 +14,10 @@ int print_last_digit(int n)
 
 	lastDigit = n % 10;
 
-	abNum = ads(lastDigit);
+	abNum = abs(lastDigit);
 
-	_putchar('0' + adNum);
+	_putchar('0' + abNum);
 
-	return (abs(adNum));
+	return (abNum);
 
 }
