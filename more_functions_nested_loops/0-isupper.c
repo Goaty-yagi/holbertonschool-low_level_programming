@@ -3,8 +3,9 @@
 
 /**
  * _isupper - calls _isupper
+ * @c: int
  *
- * Return: check if parameter is lower case
+ * Return: check if parameter is upper case
  */
 
 int _isupper(int c)
