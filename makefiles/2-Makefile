@@ -7,4 +7,4 @@ all:$(OBJ)
 	$(CC) -o $(NAME) $(SRC)
 
 first:
-	$(CC) -c $(SRC)
+	$(CC) -c -o $(OBJ) $(SRC)
