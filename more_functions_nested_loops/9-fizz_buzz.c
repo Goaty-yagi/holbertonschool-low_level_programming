@@ -6,7 +6,7 @@
  * Return: Always 0 (Success)
  */
 
-int main (void)
+int main(void)
 {
 	int i;
 
@@ -34,9 +34,13 @@ int main (void)
 		{
 			printf("%d", i);
 		}
-		printf(" ");
+		if (i != 100)
+		{
+			printf(" ");
+		}
 		i = i + 1;
 	}
+	printf("\n");
 
 	return (0);
 }
