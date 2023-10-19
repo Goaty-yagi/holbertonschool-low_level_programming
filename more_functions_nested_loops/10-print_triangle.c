@@ -19,7 +19,7 @@ void print_triangle(int size)
 
 	if (size > 0)
 	{
-		while (i <= m)
+		while (i < m)
 		{
 			if (size - w > l)
 			{
@@ -31,7 +31,7 @@ void print_triangle(int size)
 				_putchar(35);
 			}
 			i = i + 1;
-			if (i == size * l && i != m)
+			if (i == size * l)
 			{
 				_putchar('\n');
 				l = l + 1;
