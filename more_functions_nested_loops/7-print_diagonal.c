@@ -31,5 +31,5 @@ void print_diagonal(int n)
 			k = k + 1;
 		}
 	}
-	putchar('\n');
+	_putchar('\n');
 }
