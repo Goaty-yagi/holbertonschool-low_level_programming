@@ -12,15 +12,12 @@ void print_diagonal(int n)
 {
 	int i, k;
 
-	i = 1;
-
-	k = 1;
+	i, k = 1;
 
 	if (n > 0)
 	{
 		while (i <= n)
 		{
-			_putchar(32);
 			if (k == i)
 			{
 				_putchar(92);
@@ -28,8 +25,15 @@ void print_diagonal(int n)
 				k = 0;
 				i = i + 1;
 			}
+			else
+			{
+				putchar(32);
+			}
 			k = k + 1;
 		}
 	}
-	_putchar('\n');
+	else 
+	{
+		_putchar('\n');
+	}
 }
