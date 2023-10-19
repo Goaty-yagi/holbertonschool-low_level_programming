@@ -23,12 +23,12 @@ void print_triangle(int size)
 		{
 			if (size - w > l)
 			{
-				_putchar(35);
+				_putchar(32);
 				w = w + 1;
 			}
 			else
 			{
-				_putchar(32);
+				_putchar(35);
 			}
 			i = i + 1;
 			if (i == size * l && i != m)
@@ -38,7 +38,6 @@ void print_triangle(int size)
 			}
 
 		}
-		_putchar(32);
 	}
 	else
 	{
