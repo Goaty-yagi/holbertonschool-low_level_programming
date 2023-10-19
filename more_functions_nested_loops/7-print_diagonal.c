@@ -32,7 +32,7 @@ void print_diagonal(int n)
 			k = k + 1;
 		}
 	}
-	else 
+	else
 	{
 		_putchar('\n');
 	}
