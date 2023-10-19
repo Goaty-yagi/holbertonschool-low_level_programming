@@ -12,7 +12,7 @@ void print_diagonal(int n)
 {
 	int i, k;
 
-	i, k = 1;
+	i k = 1;
 
 	if (n > 0)
 	{
@@ -27,7 +27,7 @@ void print_diagonal(int n)
 			}
 			else
 			{
-				putchar(32);
+				_putchar(32);
 			}
 			k = k + 1;
 		}
