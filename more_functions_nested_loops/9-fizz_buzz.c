@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio>
 
 /**
  * main - return Fizz, Buz or int
@@ -10,9 +10,9 @@ int main (void)
 {
 	int i;
 
-	char fizz[];
+	char fizz[4];
 
-	char buzz[];
+	char buzz[4];
 
 	fizz = "Fizz";
 
@@ -36,9 +36,9 @@ int main (void)
 		}
 		else
 		{
-			printf("%d", i)
+			printf("%d", i);
 		}
-		putchar(32);
+		printf(" ")
 	}
 
 	return (0);
