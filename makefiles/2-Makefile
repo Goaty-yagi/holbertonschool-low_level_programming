@@ -3,12 +3,12 @@ SRC = main.c school.c
 OBJ = main.o school.o
 NAME = school
 
-all:excute
+all:execute
 
 $(OBJ):$(SRC)
 	$(CC) -c $(SRC)
 
-excute:$(OBJ)
+execute:$(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 
