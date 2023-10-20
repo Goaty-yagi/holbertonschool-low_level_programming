@@ -1,5 +1,10 @@
-test = echo
+CC = gcc
+SRC = main.c school.c
+OBJ = *.o
+NAME = school
 
-hello:
-	echo "hello world"
-	$(echo) "HEE"
+first:
+	$(CC) -c $(SRC)
+
+second: $(OBJ)
+
