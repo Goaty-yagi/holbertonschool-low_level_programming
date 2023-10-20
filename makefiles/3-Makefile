@@ -21,7 +21,7 @@ fclean:
 	rm -r *~ $(NAME)
 	rm -r $(OBJ)
 
-rm:
+re:
 	$(RM)
 
 
