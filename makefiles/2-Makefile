@@ -5,7 +5,7 @@ OBJ = *.o
 
 all: $(NAME)
 
-$(OBJ):$(SRC)
+$(OBJ):$(SRC:%.c=%.o)
 	echo first
 	$(CC) -c $(SRC)
 
