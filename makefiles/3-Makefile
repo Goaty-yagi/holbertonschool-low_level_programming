@@ -11,16 +11,16 @@ first: re
 	$(CC) -c -o $(OBJ) $(SRC)
 
 clean:
-	$(RM) -r *~ $(NAME)
+	$(RM) -rf *~ $(NAME)
 
 oclean:
-	$(RM) -f $(OBJ)
+	$(RM) -rf $(OBJ)
 
 fclean:
-	$(RM) -r *~ $(NAME)
-	$(RM) -r $(OBJ)
+	$(RM) -rf *~ $(NAME)
+	$(RM) -rf $(OBJ)
 
 re:
-	$(RM) -r $(OBJ)
+	$(RM) -rf $(OBJ)
 
 
