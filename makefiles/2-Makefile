@@ -3,10 +3,12 @@ SRC = main.c school.c
 NAME = school
 OBJ = *.o
 
+all: $(NAME)
+
 $(OBJ):$(SRC)
-	echo $(OBJ)
+	echo first
 	$(CC) -c $(SRC)
 
-all:$(OBJ)
-	echo test
+$(NAME): $(OBJ)
+	echo second
 	$(CC) $(OBJ) -o $(NAME)
