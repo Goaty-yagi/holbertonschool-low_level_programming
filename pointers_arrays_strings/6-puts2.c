@@ -4,7 +4,7 @@
 
 /**
  * puts2 - calls puts2
- * @s: char array
+ * @str: char array
  *
  * Return: void
  */
@@ -18,8 +18,11 @@ void puts2(char *str)
     i = 0;
     while (i < length)
     {
-        if(i % 2 == 0)
-        _putchar('0' + i);
-        i = i + 1;
+        if (i % 2 == 0)
+        {
+            _putchar(i);
+            i = i + 1;
+        }
     }
+    _putchar('\n');
 }
