@@ -15,7 +15,6 @@ void print_array(int *a, int n)
 	int i;
 
 	i = 0;
-
 	while (i < n)
 	{
 		printf("%d", a[i]);
@@ -25,5 +24,5 @@ void print_array(int *a, int n)
 		}
 		i = i + 1;
 	}
-	_putchar('\n');
+	printf("\n");
 }
