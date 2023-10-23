@@ -11,15 +11,23 @@
 
 void puts_half(char *str)
 {
-	int n, h;
-	
+	int n, s, h;
+
 	n = 0;
-	
-	h = strlen(str);
-	
-	while (n < h)
+
+	s = strlen(str);
+	if (s % 2 != 0 )
 	{
-		if (n >= h / 2)
+		h = s / 2 + 1;
+	}
+	else
+	{
+		h = s / 2;
+	}
+
+	while (n < s)
+	{
+		if (n >= h)
 		{
 			_putchar(str[n]);
 		}
