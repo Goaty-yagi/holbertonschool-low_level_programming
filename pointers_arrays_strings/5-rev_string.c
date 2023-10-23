@@ -11,16 +11,14 @@
 
 void rev_string(char *s)
 {
+
     int n, i;
 
-    char * r;
-
-    strcpy(r, s);
+    char r[1000];
 
 	n = strlen(s);
 
     i = 0;
-
 	while (n >= 0)
 	{
         r[i] = s[n - 1];
