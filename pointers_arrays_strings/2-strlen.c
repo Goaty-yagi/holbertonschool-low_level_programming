@@ -10,5 +10,5 @@
 
 int _strlen(char *s)
 {
-    return strlen(s); /* from string.h */
+	return strlen(s);
 }

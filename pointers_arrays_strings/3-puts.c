@@ -11,14 +11,15 @@
 
 void _puts(char *str)
 {
-    int length, n;
+	int length, n;
 
-    length = strlen(str);
+	length = strlen(str);
 
-    n = 0;
-    while(n < length)
-    {
-        _putchar(str[n]);
-        n = n + 1;
-    }
+	n = 0;
+	while(n < length)
+	{
+		_putchar(str[n]);
+		n = n + 1;
+	}
+	putchar('\n');
 }
