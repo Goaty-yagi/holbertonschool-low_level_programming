@@ -4,7 +4,7 @@
 
 /**
  * rev_string - calls rev_string
- * @n: char array
+ * @s: char array
  *
  * Return: void
  */
@@ -14,6 +14,8 @@ void rev_string(char *s)
     int n, i;
 
     char * r;
+
+    strcpy(r, s);
 
 	n = strlen(s);
 
