@@ -11,9 +11,9 @@
 
 void rev_string(char *s)
 {
-	int n,i;
+    int n, i;
 
-    char * copy_s;
+    char * r_s;
 
 	n = strlen(s) - 1;
 
@@ -21,19 +21,16 @@ void rev_string(char *s)
 
 	while (n >= 0)
 	{
-        copy_s[i] = s[n];
-
-		n = n - 1;
-
+        r_s[i] = s[n];
+ 		n = n - 1;
         i = i + 1;
 	}
+    n = strlen(s);
+    i = 0;
 
-    char * p;
-    p = copy_s;
-    n = 0;
-    while (n < strlen(s))
+    while (i < n)
     {
-        s[n] = *(p + n);
-        n = n + 1;
+        s[i] = r_s[i];
+        i = i + 1;
     }
 }
