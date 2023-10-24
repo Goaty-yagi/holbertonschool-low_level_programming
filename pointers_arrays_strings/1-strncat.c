@@ -7,7 +7,7 @@
  * @src: src char array
  * @n: integer
  *
- * Return: append n char from srr to dest and return 
+ * Return: append n char from srr to dest and return
  */
 
 char *_strncat(char *dest, char *src, int n)
