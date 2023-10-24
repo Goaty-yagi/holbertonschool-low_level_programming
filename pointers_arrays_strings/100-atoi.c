@@ -10,9 +10,8 @@
 
 int _atoi(char *s)
 {
-	int c;
 
-	long long int k;
+	unsigned int k, c;
 
 	k = c = 0;
 
