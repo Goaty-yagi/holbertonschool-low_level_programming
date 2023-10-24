@@ -16,9 +16,15 @@ char *_strncpy(char *dest, char *src, int n)
 	if (n != 0)
 	{
 
-		char *d = dest;
-		const char *s = src;
-		while (n != 0) /* --n n - 1 and assign like  n = n - 1 */
+		char * d;
+
+		const char * s;
+		
+		d = dest;
+		
+		s = src;
+
+		while (n != 0)
 		{
 			if ((*d++ = *s++) == 0)
 			{
