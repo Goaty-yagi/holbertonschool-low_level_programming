@@ -24,6 +24,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 		s = src;
 
+		*d = *s;
 		while (n != 0)
 		{
 			*d++ = *s++;
