@@ -7,11 +7,19 @@
  * @dest: char array
  * @src: char array
  *
- * Return: the pointer to dest
+ * Return: copy src to dest and return original src
  */
 
 char *_strcpy(char *dest, char *src)
 {
-	strcpy(dest, src);
-	return (src);
+	char *saved;
+
+	saved = dest;
+
+	while (*src)
+	{
+		*dest++ = *src++;
+	}
+
+	return saved;
 }
