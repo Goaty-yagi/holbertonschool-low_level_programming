@@ -5,9 +5,9 @@
  * _strncat - calls _strncat
  * @dest: destination char array
  * @src: src char array
- * @int: integer
+ * @n: integer
  *
- * Return: void
+ * Return: append n char from srr to dest and return 
  */
 
 char *_strncat(char *dest, char *src, int n)
