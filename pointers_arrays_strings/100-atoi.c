@@ -10,31 +10,31 @@
 
 int _atoi(char *s)
 {
-    int k,c;
+	int c;
 
-    k = c = 0;
+	long long int k;
 
-    while (*s) 
-    {
-        if(*s >= '0' && *s <= '9')
-        {
-            s--;
-            if(*s == 45)
-            {
-                c = c + 1;
-            }
-            s++;
-            k = k * 10 + *s - '0';
-        }
-        else if (k)
-        {
-            s = "\0";
-        } 
-        s++;
-     }
-     if(c)
-     {
-        k = k * -1;
-     }
-     return (k);
+	k = c = 0;
+
+	while (*s)
+	{
+		if (*s >= '0' && *s <= '9')
+		{
+			k = k * 10 + *s - '0';
+		}
+		else if (*s == 45)
+		{
+			c = c + 1;
+		}
+		else if (k)
+		{
+			s = "\0";
+		}
+		s++;
+	}
+	if (c % 2 != 0)
+	{
+		k = k * -1;
+	}
+	return (k);
 }
