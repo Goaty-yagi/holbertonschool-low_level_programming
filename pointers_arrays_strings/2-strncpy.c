@@ -30,24 +30,4 @@ char *_strncpy(char *dest, char *src, int n)
 		}
 	}
 	return (dest);
-	// char *saved;
-
-	// int i, length;
-
-	// i = 0;
-
-	// length = strlen(src);
-
-	// saved = dest;
-
-	// while (i <= n)
-	// {
-	// 	*dest++ = *src++;
-	// 	i = i + 1;
-	// }
-	// if (n > length)
-	// {
-	// 	*dest++ = '\0';
-	// }
-	// return (saved);
 }
