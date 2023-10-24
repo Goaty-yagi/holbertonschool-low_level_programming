@@ -16,17 +16,17 @@ char *_strncpy(char *dest, char *src, int n)
 	if (n != 0)
 	{
 
-		char * d;
+		char *d;
 
-		const char * s;
-		
+		const char *s;
+
 		d = dest;
-		
+
 		s = src;
 
 		while (n != 0)
 		{
-			if ((*d++ = *s++) == 0)
+			if (*dest == 0)
 			{
 				while (--n != 0)
 				{
@@ -34,6 +34,7 @@ char *_strncpy(char *dest, char *src, int n)
 				}
 				break;
 			}
+			*d++ = *s++;
 			n = n - 1;
 		}
 	}
