@@ -8,29 +8,46 @@
  * @src: src char array
  * @n: integer
  *
- * Return: 
+ * Return: dest pointer
  */
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *saved;
+	if (n != 0) {
 
-	int i, length;
-
-	i = 0;
-
-	length = strlen(src);
-
-	saved = dest;
-
-	while (*src && i < n)
-	{
-		*dest++ = *src++;
-		i = i + 1;
+		char *d = dest;
+		const char *s = src;
+		while (--n != 0) /* --n n - 1 and assign like  n = n - 1 */
+		{
+			if ((*d++ = *s++) == 0) 
+			{
+				while (--n != 0)
+				{
+					*d++ = 0;
+				}
+				break;
+			}
+		}
 	}
-	if (n > length)
-	{
-		*dest++ = '\0';
-	}
-	return (saved);
+	return (dest);
+	// char *saved;
+
+	// int i, length;
+
+	// i = 0;
+
+	// length = strlen(src);
+
+	// saved = dest;
+
+	// while (i <= n)
+	// {
+	// 	*dest++ = *src++;
+	// 	i = i + 1;
+	// }
+	// if (n > length)
+	// {
+	// 	*dest++ = '\0';
+	// }
+	// return (saved);
 }
