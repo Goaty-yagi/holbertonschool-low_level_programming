@@ -10,13 +10,10 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i;
 
 	char *saved;
 
 	saved = dest; /* first pointer*/
-
-	i = 0;
 
 	while (*dest)
 	{
@@ -27,6 +24,6 @@ char *_strcat(char *dest, char *src)
 		*dest++ = *src++;
 	}
 	*dest++ = '\0';
-	
+
 	return (saved);
 }
