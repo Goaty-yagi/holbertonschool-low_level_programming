@@ -18,6 +18,8 @@ char *_strncpy(char *dest, char *src, int n)
 
 		char *d;
 
+		int i;
+
 		const char *s;
 
 		d = dest;
@@ -26,9 +28,9 @@ char *_strncpy(char *dest, char *src, int n)
 
 		while (n != 0)
 		{
-			*d++ = *s++;
-			
-			if (*s == 0)
+			i = (*d++ = *s++);
+
+			if (i == 0)
 			{
 				while (--n != 0)
 				{
