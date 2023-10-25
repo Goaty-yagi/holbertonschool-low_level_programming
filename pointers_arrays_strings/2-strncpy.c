@@ -28,7 +28,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 		while (n != 0)
 		{
-			i = (*d++ = *s++);
+			i = (*d++ = *s++); /* wha is this?*/
 
 			if (i == 0)
 			{
