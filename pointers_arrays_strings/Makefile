@@ -10,7 +10,7 @@ all:$(OBJ)
 	./result
 
 first:
-	$(CC) -fsanitize=signed-integer-overflow -c -o $(SRC)
+	$(CC) $(CFLAGS) -c -o $(SRC)
 
 clean:
 	$(RM) -rf *~ $(NAME) $(OBJ)

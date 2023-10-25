@@ -8,23 +8,25 @@
  */
 int main(void)
 {
-    int nb;
+    char s1[98];
+	char *p;
+	int i;
 
-    nb = _atoi("98");
-    printf("%d\n", nb);
-    nb = _atoi("-402");
-    printf("%d\n", nb);
-    nb = _atoi("          ------++++++-----+++++--98");
-    printf("%d\n", nb);
-    nb = _atoi("214748364");
-    printf("%d\n", nb);
-    nb = _atoi("0");
-    printf("%d\n", nb);
-    nb = _atoi("Suite 402");
-    printf("%d\n", nb);
-    nb = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA 94111 - USA             ");
-    printf("%d\n", nb);
-    nb = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
-    printf("%d\n", nb);
-    return (0);
+	for (i = 0; i < 98 - 1; i++)
+		s1[i] = '-';
+	s1[i] = '\0';
+	printf("FIRSR:%s\n", s1);
+	p = _strncpy(s1, "Talk is cheap. Show me the code.\n", 64);
+	printf("%s\n", s1);
+	printf("%s\n", p);
+	for (i = 0; i < 98; i++)
+	{
+		if (i % 10)
+			printf(" ");
+		if (!(i % 10) && i)
+			printf("\n");
+		printf("0x%02x", s1[i]);
+	}
+	printf("\n");
+	return (0);
 }
