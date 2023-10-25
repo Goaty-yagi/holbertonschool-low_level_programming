@@ -11,18 +11,18 @@
 
 char *string_toupper(char *c)
 {
-    char *ch;
+	char *ch;
 
-    ch = c;
+	ch = c;
 
-    while (*c)
-    {
-        if(*c >= 97&& *c <= 122)
-        {
-            *c = *c - 32;
-        }
-        c++;
-    }
+	while (*c)
+	{
+		if (*c >= 97 && *c <= 122)
+		{
+			*c = *c - 32;
+		}
+		c++;
+	}
 
-    return (ch);
+	return (ch);
 }
