@@ -13,10 +13,6 @@ char *string_toupper(char *c)
 {
     char *ch;
 
-    int i;
-
-    i = 0;
-
     ch = c;
 
     while (*c)
