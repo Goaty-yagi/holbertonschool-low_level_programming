@@ -11,30 +11,19 @@
 
 char *_strchr(char *s, char c)
 {
-	int i;
-	
-	if (!c)
-	{
-		return (NULL);
-	}
-
-	i = 0;
 
 	while (*s)
 	{
 		if (*s == c)
 		{
-			i = 1;
-			break;
+			return (s);
+		}
+		if (*s == c)
+		{
+			return (NULL);
 		}
 		s++;
 	}
-	if (i)
-	{
-		return (s);
-	}
-	else
-	{
-		return (NULL);
-	}
+
+	return (s);
 }
