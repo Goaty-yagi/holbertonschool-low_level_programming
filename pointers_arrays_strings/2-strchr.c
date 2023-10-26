@@ -11,11 +11,12 @@
 
 char *_strchr(char *s, char c)
 {
+	int i;
+	
 	if (!c)
 	{
 		return (NULL);
 	}
-	int i;
 
 	i = 0;
 
