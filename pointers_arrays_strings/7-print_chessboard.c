@@ -4,8 +4,8 @@
 #include <ctype.h>
 
 /**
- * _strpbrk - calls _strpbrk
- * @a[8]: nested char pointer
+ * print_chessboard - calls print_chessboard
+ * @a: nested char pointer
  *
  * Return: void
  */
