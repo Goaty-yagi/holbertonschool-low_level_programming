@@ -13,24 +13,24 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-    int a_counter, s_len;
+	int a_counter, s_len;
 
-    a_counter = 0;
+	a_counter = 0;
 
-    s_len = strlen(accept);
+	s_len = strlen(accept);
 
-    while (*s)
-    {
-        while (a_counter < s_len)
-        {
-            if (*s == accept[a_counter])
-            {
-                return (s);
-            }
-            a_counter++;
-        }
-        s++;
-        a_counter = 0;
-    }
-    return (NULL);
+	while (*s)
+	{
+		while (a_counter < s_len)
+		{
+			if (*s == accept[a_counter])
+			{
+				return (s);
+			}
+			a_counter++;
+		}
+		s++;
+		a_counter = 0;
+	}
+	return (NULL);
 }
