@@ -15,7 +15,7 @@ char *cap_string(char *c)
 
 	int n;
 
-	 n = 0;
+	n = 0;
 
 	ch = c;
 
@@ -45,13 +45,13 @@ char *cap_string(char *c)
 		{
 			n = n + 1;
 		}
-		
+
 		if (*c == '\t')
-			{
-				*c = 32;
-			}
+		{
+			*c = 32;
+		}
 		c++;
 	}
-	printf("\n");
+	// printf("\n");
 	return (ch);
 }
