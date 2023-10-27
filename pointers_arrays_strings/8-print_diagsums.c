@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * print_diagsums - calls print_diagsums
@@ -11,34 +12,32 @@
 
 void print_diagsums(int *a, int size)
 {
-	int a_counter, e_line, a_size, first_sum, second_sum, f_counter, s_counter;
+    int row = 0;
+    int col = 0;
+    int ltr = 0;
+    int rtl = 0;
+    int index;
 
-	int *array = a;
+    while (row < size)
+    {
+        while (col < size)
+        {
+            if (row == col)
+            {
+                index = (size * row) + row;
+                ltr = ltr + a[index];
+            }
+            if (col == ((size - 1) - row))
+            {
+                index = (size * row) + ((size - 1) - row);
+                rtl = rtl + a[index];
+            }
+            col = col + 1;
+        }
+        row = row + 1;
+        col = 0;
+    }
+    printf("%d, ", ltr);
+    printf("%d\n", rtl);
 
-	a_counter = f_counter = e_line = 0;
-
-	s_counter = size - 1;
-
-	a_size = size * size;
-
-	while (a_counter < a_size)
-	{
-		if (a_counter == f_counter)
-		{
-			first_sum = first_sum + array[a_counter];
-		}
-		if (a_counter == s_counter)
-		{
-			second_sum = second_sum + array[a_counter];
-		}
-		if ((a_counter + 1) % size == 0 && a_counter != 0)
-		{
-			e_line = e_line + 1;
-			f_counter = size * e_line + e_line;
-			s_counter = size * e_line + (size - (e_line + 1));
-		}
-		a_counter = a_counter + 1;
-	}
-	printf("%d, %d", first_sum, second_sum);
-	printf("\n");
 }
