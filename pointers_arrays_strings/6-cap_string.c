@@ -52,6 +52,5 @@ char *cap_string(char *c)
 		}
 		c++;
 	}
-	// printf("\n");
 	return (ch);
 }
