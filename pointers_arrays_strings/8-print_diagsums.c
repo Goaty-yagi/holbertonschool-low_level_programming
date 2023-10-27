@@ -1,7 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 
 /**
  * print_diagsums - calls print_diagsums
