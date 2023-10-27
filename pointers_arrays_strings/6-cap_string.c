@@ -13,15 +13,11 @@ char *cap_string(char *c)
 {
 	char *ch;
 
-	int *sep;
+	int n;
 
-	int i, n;
-
-	i = n = 0;
+	 n = 0;
 
 	ch = c;
-
-	// sep = {10, 32, 9, 11};
 
 	while (*c)
 	{
@@ -39,13 +35,23 @@ char *cap_string(char *c)
 		}
 		else if (*c >= 48 && *c <= 57)
 		{
-
+			n = 0;
+		}
+		else if (*c == 45)
+		{
+			n = 0;
 		}
 		else
 		{
 			n = n + 1;
 		}
+		
+		if (*c == '\t')
+			{
+				*c = 32;
+			}
 		c++;
 	}
+	printf("\n");
 	return (ch);
 }
