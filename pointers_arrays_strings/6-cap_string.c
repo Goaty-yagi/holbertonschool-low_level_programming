@@ -8,20 +8,16 @@
  *
  * Return: capitalizes all words of a string.
  */
-
 char *cap_string(char *c)
 {
 	char *ch;
-
 	int n;
-
-	n = 0;
-
+	n = 1;
 	ch = c;
 
 	while (*c)
 	{
-		if (*c >= 65 && *c <= 91)
+		if ((*c >= 65 && *c <= 91) || (*c >= 48 && *c <= 57) || *c == 45)
 		{
 			n = 0;
 		}
@@ -33,22 +29,9 @@ char *cap_string(char *c)
 				n = 0;
 			}
 		}
-		else if (*c >= 48 && *c <= 57)
-		{
-			n = 0;
-		}
-		else if (*c == 45)
-		{
-			n = 0;
-		}
 		else
 		{
 			n = n + 1;
-		}
-
-		if (*c == '\t')
-		{
-			*c = 32;
 		}
 		c++;
 	}
