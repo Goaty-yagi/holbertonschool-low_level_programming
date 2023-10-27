@@ -12,8 +12,8 @@ char *cap_string(char *c)
 {
 	char *ch;
 	int n;
-	n = 1;
 
+	n = 1;
 	ch = c;
 
 	while (*c)
