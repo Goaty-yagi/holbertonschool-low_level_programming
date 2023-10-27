@@ -22,7 +22,7 @@ void print_diagsums(int *a, int size)
 	s_counter = size - 1;
 
 	a_size = size * size;
-	
+
 	while (a_counter < a_size)
 	{
 		if (a_counter == f_counter)
