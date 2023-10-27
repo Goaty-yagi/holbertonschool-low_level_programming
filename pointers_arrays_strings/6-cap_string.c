@@ -5,7 +5,6 @@
 /**
  * cap_string - calls cap_string
  * @c: *char
- *
  * Return: capitalizes all words of a string.
  */
 char *cap_string(char *c)
