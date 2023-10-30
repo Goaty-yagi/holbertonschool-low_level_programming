@@ -3,8 +3,8 @@
 /**
  * main - Print text
  * @argc: int
- * @argv: char array pointer 
- * 
+ * @argv: char array pointer
+ *
  * Return: Always 0 (Success)
  */
 
