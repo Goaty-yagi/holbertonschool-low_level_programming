@@ -1,6 +1,4 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
 /**
  * _atoi - calls _atoi
  * @s: char array
