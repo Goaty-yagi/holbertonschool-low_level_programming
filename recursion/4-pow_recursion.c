@@ -13,9 +13,23 @@
 
 int _pow_recursion(int x, int y)
 {
+	int init_y;
+
+	init_y = y;
+
+	y = y - 1;
+
+	if (y == 0)
+	{
+		return (x);
+	}
 	if (y < 0)
 	{
+		if (init_y == 0)
+		{
+			return (1);
+		}
 		return (-1);
 	}
-	return (pow(x, y));
+	return (x * _pow_recursion(x, y));
 }
