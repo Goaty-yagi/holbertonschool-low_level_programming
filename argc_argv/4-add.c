@@ -11,8 +11,11 @@
 int check(char *ch)
 {
 	char *p = ch;
+
 	int error;
+
 	error = 0;
+
 	while (*p)
 	{
 		if (*p >= 48 && *p <= 57)
@@ -42,7 +45,7 @@ int main(int argc, char *argv[])
 	i = 1;
 
 	result = error = 0;
-	 
+
 	if (!argv[1])
 	{
 		i = argc;
