@@ -8,13 +8,7 @@
  * Return: void
  */
 
-void swap_int(int *a, int *b)
+int _isdigit(int c)
 {
-	int aa;
-
-	aa = *a;
-
-	*a = *b;
-
-	*b = aa;
+	return c;
 }

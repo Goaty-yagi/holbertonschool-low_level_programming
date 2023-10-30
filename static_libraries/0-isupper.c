@@ -7,7 +7,7 @@
  * Return: void
  */
 
-void reset_to_98(int *n)
+int _isupper(int c)
 {
-	*n = 98;
+	return c;
 }
