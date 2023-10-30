@@ -15,9 +15,9 @@ int main(int argc, char *argv[])
 
 	(void)argc;
 
-	if (!argv[1] || !argv[1])
+	if (!argv[1] || !argv[2])
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 
@@ -25,6 +25,6 @@ int main(int argc, char *argv[])
 
 	s = strtol(argv[2], NULL, 10);
 
-	printf("%d", f * s);
+	printf("%d\n", f * s);
 	return (0);
 }
