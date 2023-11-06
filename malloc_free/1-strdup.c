@@ -5,9 +5,9 @@
 
 /**
  * _strdup - calls _strdup
- * @char:  str
+ * @str:  str
  *
- * Return: char array
+ * Return: duplicared char array
  */
 
 char *_strdup(char *str)
@@ -30,5 +30,5 @@ char *_strdup(char *str)
 		array[len - 1] = str[len - 1];
 		len--;
 	}
-	return (array++);
+	return ((array++));
 }
