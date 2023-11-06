@@ -21,7 +21,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	len = strlen(str);
+	len = strlen(str - 1);
 
 	array = malloc(len);
 
@@ -30,5 +30,5 @@ char *_strdup(char *str)
 		array[len - 1] = str[len - 1];
 		len--;
 	}
-	return ((array++));
+	return (array);
 }
