@@ -16,7 +16,7 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 	{
-		return NULL; // Check for invalid dimensions
+		return NULL;
 	}
 
 	grid = malloc(width * sizeof(int *)); /* Allocate memory for the array of int pointers */
