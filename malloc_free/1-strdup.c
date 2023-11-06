@@ -5,31 +5,30 @@
 
 /**
  * _strdup - calls _strdup
- * @char:  i¥str
+ * @char:  str
  *
  * Return: char array
  */
 
 char *_strdup(char *str)
 {
-    int len;
-    
-    char *array;
+	int len;
 
-    if (!str)
-    {
-        return (NULL);
-    }
+	char *array;
 
-    len = strlen(str);
+	if (!str)
+	{
+		return (NULL);
+	}
 
-    array = malloc(len);
+	len = strlen(str);
 
-    while (len)
-    {
-        array[len - 1] = str[len - 1];
-        len--;
-    }
-    return (array);
+	array = malloc(len);
 
+	while (len)
+	{
+		array[len - 1] = str[len - 1];
+		len--;
+	}
+	return (array++);
 }
