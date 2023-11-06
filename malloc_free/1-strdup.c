@@ -23,15 +23,15 @@ char *_strdup(char *str)
 
 	len = strlen(str);
 
-	array = malloc(len * sizeof(char));
+	array = malloc(len * sizeof(char) + 1);
 
 	if (array == NULL)
 	{
 		return (NULL);
 	}
-	
+
 	array[len] = '\0';
-	
+
 	while (len)
 	{
 		array[len - 1] = str[len - 1];
