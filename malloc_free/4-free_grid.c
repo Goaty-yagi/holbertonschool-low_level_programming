@@ -3,7 +3,7 @@
 #include <string.h>
 
 /**
- * alloc_grid - calls alloc_grid
+ * free_grid - calls free_grid
  * @grid:  nested int
  * @height:  int
  *
@@ -12,14 +12,14 @@
 
 void free_grid(int **grid, int height)
 {
-    int counter;
+	int counter;
 
-    counter = 0;
+	counter = 0;
 
 	while (counter < height)
-    {
-        free(grid[counter]);
-        counter = counter + 1;
-    }
-    free(grid);
+	{
+		free(grid[counter]);
+		counter = counter + 1;
+	}
+	free(grid);
 }
