@@ -16,14 +16,14 @@ char *_strdup(char *str)
 
 	char *array;
 
-	if (!str)
-	{
-		return (NULL);
-	}
-
 	len = strlen(str);
 
 	array = malloc(len * sizeof(char));
+
+	if (!str || array == NULL)
+	{
+		return (NULL);
+	}
 
 	array[len] = '\0';
 
@@ -32,6 +32,5 @@ char *_strdup(char *str)
 		array[len - 1] = str[len - 1];
 		len--;
 	}
-
 	return (array);
 }
