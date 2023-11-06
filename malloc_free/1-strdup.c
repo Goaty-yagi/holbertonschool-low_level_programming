@@ -16,21 +16,25 @@ char *_strdup(char *str)
 
 	char *array;
 
-	len = strlen(str);
-
-	array = malloc(len * sizeof(char));
-
-	if (!str || array == NULL)
+	if (!str)
 	{
 		return (NULL);
 	}
 
+	len = strlen(str);
+
+	array = malloc(len * sizeof(char));
+
 	array[len] = '\0';
 
-	while (len)
+	if (array)
 	{
-		array[len - 1] = str[len - 1];
-		len--;
+		while (len)
+		{
+			array[len - 1] = str[len - 1];
+			len--;
+		}
 	}
+
 	return (array);
 }
