@@ -21,14 +21,17 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	len = strlen(str - 1);
+	len = strlen(str);
 
-	array = malloc(len);
+	array = malloc(len * sizeof(char));
+
+	array[len] = '\0';
 
 	while (len)
 	{
 		array[len - 1] = str[len - 1];
 		len--;
 	}
+
 	return (array);
 }
