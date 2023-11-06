@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _memset - calls _memset
+ * create_array - calls create_array
  * @size:  int
  * @c: char
  *
@@ -23,8 +23,15 @@ char *create_array(unsigned int size, char c)
 
 	while (size)
 	{
-		array[size -1] = c;
+		array[size - 1] = c;
 		size = size - 1;
 	}
-	return (array);
+	if (array)
+	{
+		return (array);
+	}
+	else
+	{
+		return (NULL);
+	}
 }
