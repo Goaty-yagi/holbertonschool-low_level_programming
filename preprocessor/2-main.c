@@ -2,14 +2,13 @@
 #include <string.h>
 
 /**
- * _puts_recursion - calls _puts_recursion
- * @s: char array
+ * main - calls main
  *
- * Return: void
+ * Return: int 0 SUCCESS
  */
 
 int main(void)
 {
-	printf("%s", __FILE__);
-    return (0);
+	printf("%s\n", __FILE__);
+	return (0);
 }
