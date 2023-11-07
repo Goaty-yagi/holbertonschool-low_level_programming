@@ -12,18 +12,28 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-    int *pointer;
+	int *pointer, counter, int_n;
 
-    if (nmemb == 0 || size ==0)
-    {
-        return (NULL);
-    }
+	if (nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
 
-    pointer = malloc(size * nmemb);
+	pointer = malloc(size * nmemb);
 
-    while (*pointer++)
-    {
-        pointer = 0;
-    }
-    return (pointer);
+	counter = 0;
+
+	int_n = nmemb;
+
+	if (!pointer)
+	{
+		return (NULL);
+	}
+
+	while (counter < int_n)
+	{
+		pointer[counter] = 0;
+		counter = counter + 1;
+	}
+	return (pointer);
 }
