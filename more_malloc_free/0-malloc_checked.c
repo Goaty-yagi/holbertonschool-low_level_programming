@@ -6,9 +6,18 @@
  * malloc_checked - calls malloc_checked
  * @b:  int
  *
- * Return: char array
+ * Return: pointer of d
  */
 
 void *malloc_checked(unsigned int b)
 {
+	int *pointer;
+
+	pointer = malloc(sizeof(b));
+
+	if (!pointer)
+	{
+		exit(98);
+	}
+	return (pointer);
 }
