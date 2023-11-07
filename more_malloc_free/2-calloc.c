@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * _calloc - calls _calloc
@@ -13,21 +12,31 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *pointer;
+	char *pointer;
+
+	int int_n;
+
+	unsigned int counter;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
+	int_n = nmemb;
 
-	pointer = malloc(size * nmemb);
+	pointer = malloc(size * int_n);
+
+	counter = 0;
 
 	if (!pointer)
 	{
 		return (NULL);
 	}
 
-	memset(pointer, 0, size + nmemb);
-
+	while (counter < nmemb)
+	{
+		pointer[counter] = 0;
+		counter = counter + 1;
+	}
 	return (pointer);
 }
