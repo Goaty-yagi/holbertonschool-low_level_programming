@@ -36,11 +36,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		len_2 = n;
 	}
 
-	new_char = malloc(len_1 + len_2 * sizeof(char));
-	new_char[len_1 + len_2] = '\0';
+	new_char = malloc(len_1 + len_2 * sizeof(char) + 1);
 	if (new_char == NULL)
 		return (NULL);
 
+	new_char[len_1 + len_2] = '\0';
 	while (counter < len_2 + len_1)
 	{
 		if (*s1)
