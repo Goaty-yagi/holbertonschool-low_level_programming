@@ -3,7 +3,6 @@
 /**
  * init_dog - calls init_dog
  * @dog: dog struct
- * @d: pointer
  * @name: char
  * @age: float num
  * @owner: owner name
