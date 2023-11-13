@@ -4,6 +4,7 @@
 /**
  * array_iterator - calls array_iterator
  * @array: int array
+ * @size: array size
  * @action: function
  *
  * Return: void
