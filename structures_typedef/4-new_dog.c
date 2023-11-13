@@ -26,8 +26,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	len_name = strlen(name);
 	len_owner = strlen(owner);
-	copy_name = calloc(sizeof(name)+ 1, 1);
-	copy_owner = calloc(sizeof(owner)+ 1, 1);
+	copy_name = malloc(sizeof(name) + 1);
+	copy_owner = malloc(sizeof(owner) + 1);
 	copy_name[len_name] = copy_owner[len_owner] = '\0';
 
 	while (counter < len_name)
@@ -45,5 +45,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	my_dog->name = copy_name;
 	my_dog->age = age;
 	my_dog->owner = copy_owner;
-	return (my_dog?my_dog:NULL);
+	if (my_dog == NULL)
+	{
+		free(copy_name);
+		free(copy_owner);
+		return (NULL);
+	}
+	return (my_dog);
 }
