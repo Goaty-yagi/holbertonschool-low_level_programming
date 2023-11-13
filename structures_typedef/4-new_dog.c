@@ -29,17 +29,22 @@ dog_t *new_dog(char *name, float age, char *owner)
 	copy_name = malloc(sizeof(name) + 1);
 	copy_owner = malloc(sizeof(owner) + 1);
 	copy_name[len_name] = copy_owner[len_owner] = '\0';
-
-	while (counter < len_name)
+	if (copy_name)
 	{
-		copy_name[counter] = name[counter];
-		counter = counter + 1;
+		while (counter < len_name)
+		{
+			copy_name[counter] = name[counter];
+			counter = counter + 1;
+		}
 	}
 	counter = 0;
-	while (counter < len_owner)
+	if (copy_owner)
 	{
-		copy_owner[counter] = owner[counter];
-		counter = counter + 1;
+		while (counter < len_owner)
+		{
+			copy_owner[counter] = owner[counter];
+			counter = counter + 1;
+		}
 	}
 	my_dog = &d;
 	my_dog->name = copy_name;
