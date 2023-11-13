@@ -14,47 +14,22 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	struct dog *my_dog;
+	dog_t d;
 
-	struct dog d;
-
-	char *copy_name, *copy_owner;
-
-	int len_name, len_owner, counter;
-
-	counter = 0;
-
-	len_name = strlen(name);
-	len_owner = strlen(owner);
-	copy_name = malloc(sizeof(name) + 1);
-	copy_owner = malloc(sizeof(owner) + 1);
-	copy_name[len_name] = copy_owner[len_owner] = '\0';
-	if (copy_name)
+	dog_t *new_d;
+	if (name == NULL || owner == NULL)
 	{
-		while (counter < len_name)
-		{
-			copy_name[counter] = name[counter];
-			counter = counter + 1;
-		}
-	}
-	counter = 0;
-	if (copy_owner)
-	{
-		while (counter < len_owner)
-		{
-			copy_owner[counter] = owner[counter];
-			counter = counter + 1;
-		}
-	}
-	my_dog = &d;
-	my_dog->name = copy_name;
-	my_dog->age = age;
-	my_dog->owner = copy_owner;
-	if (my_dog == NULL)
-	{
-		free(copy_name);
-		free(copy_owner);
 		return (NULL);
 	}
-	return (my_dog);
+	new_d = &d;
+	new_d->name = strdup(name);
+	new_d->owner = strdup(owner);
+	if (new_d->name == NULL || new_d->owner == NULL)
+	{
+		free(new_d->name);
+		free(new_d->owner);
+		return (NULL);
+	}
+	new_d->age = age;
+	return new_d;
 }
