@@ -14,49 +14,54 @@
 
 void print_all(const char *const format, ...)
 {
-    va_list ap;
+	va_list ap;
 
-    char *result;
+	char *result;
 
-    unsigned int i, c;
+	unsigned int i, c;
 
-    i = c = 0;
-    va_start(ap, format);
-    while (format[i])
-    {
-        switch (format[i])
-        {
-        case 'c':
-            printf("%c", va_arg(ap, int));
-			c++;
-            break;
-        case 'i':
-            printf("%d", va_arg(ap, int));
-			c++;
-            break;
-        case 'f':
-            printf("%f", va_arg(ap, double));
-			c++;
-            break;
-        case 's':
-            result = va_arg(ap, char *);
-            if (result != NULL)
-            {
-                printf("%s", result);
+	va_start(ap, format);
+	
+	if (format != NULL)
+	{
+		i = c = 0;
+		while (format[i])
+		{
+			switch (format[i])
+			{
+			case 'c':
+				printf("%c", va_arg(ap, int));
 				c++;
 				break;
-            }
-            printf("%s", result);
-			c++;
-            break;
-        }
-        i = i + 1;
-        if (format[i] && c)
-        {
-            printf(", ");
-        }
-		c = 0;
-    }
-    printf("\n");
-    va_end(ap);
+			case 'i':
+				printf("%d", va_arg(ap, int));
+				c++;
+				break;
+			case 'f':
+				printf("%f", va_arg(ap, double));
+				c++;
+				break;
+			case 's':
+				result = va_arg(ap, char *);
+				if (result != NULL)
+				{
+					printf("%s", result);
+					c++;
+					break;
+				}
+				printf("(nil)");
+				c++;
+				break;
+			}
+			i = i + 1;
+			if (format[i] && c)
+			{
+				printf(", ");
+			}
+			c = 0;
+		}
+	}
+
+	printf("\n");
+	va_end(ap);
 }
