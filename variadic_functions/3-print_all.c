@@ -43,11 +43,10 @@ void print_all(const char *const format, ...)
             if (result != NULL)
             {
                 printf("%s", result);
+				c++;
+				break;
             }
-            else
-            {
-                printf("%s", result);
-            }
+            printf("%s", result);
 			c++;
             break;
         }
