@@ -3,12 +3,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - check the code
+ * @argc: int
+ * @argv: array 
+ *
+ * Return: Always 0.
+ */
+
 int main(int argc, char *argv[])
 {
 	int first_int, second_int, result;
 
 	int (*function)(int, int);
-	
 	if (argc != 4)
 	{
 		printf("Error\n");
@@ -27,6 +34,6 @@ int main(int argc, char *argv[])
 	{
 		result = function(first_int, second_int);
 	}
-	printf("%d", result);
+	printf("%d\n", result);
 	return (0);
 }

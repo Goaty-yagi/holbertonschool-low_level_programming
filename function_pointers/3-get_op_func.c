@@ -3,6 +3,13 @@
 #include <string.h>
 #include <stdlib.h>
 
+/**
+ * get_op_func - call get_op_func
+ * @s: function
+ *
+ * Return: int
+ */
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {

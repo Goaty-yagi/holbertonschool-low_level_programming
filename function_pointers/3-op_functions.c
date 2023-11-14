@@ -6,6 +6,7 @@
  * op_add - calls op_add
  * @a: num1
  * @b: numb
+ * Description:  sum of a and b
  * Return:  returns the sum of a and b
  */
 
@@ -13,6 +14,7 @@
  * op_sub - calls op_sub
  * @a: num1
  * @b: numb
+ * Description:  difference of a and b
  * Return:  returns the difference of a and b
  */
 
@@ -20,6 +22,7 @@
  * op_mul - calls op_mul
  * @a: num1
  * @b: numb
+ * Description: product of a and b
  * Return:  returns the product of a and b
  */
 
@@ -27,6 +30,7 @@
  * op_div - calls op_div
  * @a: num1
  * @b: numb
+ * Description: division of a by b
  * Return:  returns the result of the division of a and b
  */
 
@@ -34,6 +38,7 @@
  * op_mod - calls op_mod
  * @a: num1
  * @b: numb
+ * Description: division of a by b
  * Return:  returns the remainder of the division of a by b
  */
 
