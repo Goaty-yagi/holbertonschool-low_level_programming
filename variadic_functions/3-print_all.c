@@ -10,7 +10,8 @@ void print_all(const char *const format, ...)
 	va_list ap; char *result, null[6] = "(nil)"; unsigned int i, c; va_start(ap, format);
 	if (format == NULL)
 		return;
-	for (i = 0; format[i]; i++)
+	i = c = 0;
+	while (format[i])
 	{
 		switch (format[i])
 		{
@@ -30,9 +31,9 @@ void print_all(const char *const format, ...)
 		default:
 			c = 1;
 		}
-		if (format[i + 1] && !c)
+		if (format[i] && !c)
 			printf(", ");
-		c = 0;
+		c = 0; i = i + 1;
 	}
 	printf("\n");va_end(ap);
 }
