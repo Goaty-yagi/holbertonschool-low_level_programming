@@ -8,7 +8,6 @@
  * @name: char
  * @age: float num
  * @owner: owner name
- *
  * Return: structure pointer
  */
 
@@ -21,19 +20,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	new_d->name = strdup(name);
-	new_d->owner = strdup(owner);
-	if (new_d->name == NULL)
+	new_d->name = malloc(strlen(name) + 1);
+	new_d->owner = malloc(strlen(owner) + 1);
+	if (new_d->name == NULL || new_d->owner == NULL)
 	{
-		free(new_d);
-		return (NULL);
-	}
-	if (new_d->owner == NULL)
-	{
-		free(new_d);
 		free(new_d->name);
+		free(new_d->owner);
+		free(new_d);
 		return (NULL);
 	}
+	strcpy(new_d->name, name);
+	strcpy(new_d->owner, owner);
 	new_d->age = age;
 	return (new_d);
 }
