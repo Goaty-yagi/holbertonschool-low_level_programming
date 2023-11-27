@@ -2,9 +2,9 @@
 
 /**
  * print_list - calls print_list
- * @s: char array
+ * @h: node header
  *
- * Return: void
+ * Return: sum of nodes
  */
 
 size_t print_list(const list_t *h)
@@ -12,7 +12,7 @@ size_t print_list(const list_t *h)
 	size_t count;
 
 	count = 0;
-	
+
 	while (h != NULL)
 	{
 		count = count + 1;
