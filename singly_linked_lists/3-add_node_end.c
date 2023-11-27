@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_node - calls add_node
+ * add_node_end - calls add_node_end
  * @head: node header pointer pointer
  * @str: char pointer
  *
@@ -11,7 +11,7 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new, *p;
-	
+
 	p = *head;
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
