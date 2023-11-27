@@ -1,5 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
 
 /**
  * struct list_s - singly linked list
@@ -17,5 +20,6 @@ typedef struct list_s
 } list_t;
 
 int _putchar(char c);
+size_t print_list(const list_t *h);
 
 #endif
