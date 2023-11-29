@@ -5,10 +5,8 @@
  * @h: node header pointer pointer
  * @idx: int
  * @n: int
- *
  * Return: new address
  */
-
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *new, *p, *pre;
@@ -16,21 +14,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	new = malloc(sizeof(dlistint_t));
 	pre = malloc(sizeof(dlistint_t));
-	if (new == NULL || pre == NULL || h == NULL)
-	{
+	if (new == NULL || pre == NULL)
 		return (NULL);
-	}
 	p = *h;
 	counter = 0;
-
 	new->n = n;
 	new->next = NULL;
 	new->prev = NULL;
-
-	if (idx == 0)
+	if (idx == 0 || *h == NULL)
 	{
 		new->next = *h;
-		(*h)->prev = new;
+		if(*h)
+			(*h)->prev = new;
 		*h = new;
 		return (new);
 	}
