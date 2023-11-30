@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 	bitCount = sizeof(unsigned long int) * 8; /* max 64 bit*/
 	i = bitCount - 1;
 
-	while (i >= bitCount / 2)
+	while (i >= 32)
 	{/* Set a mask for each bit position. assume mask is 1 concat 0 * n*/
 		mask = 1 << i;
 		if (n & mask)
