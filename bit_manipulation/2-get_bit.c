@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 /**
  * get_bit - calls get_bit
  * @n: int
@@ -12,6 +13,9 @@ int get_bit(unsigned long int n, unsigned int index)
 	int bitCount, i, started;
 	unsigned long int mask, ui;
 
+	if (n >= ULONG_MAX) {
+        return (-1);
+    }
 	started = 0;
 	bitCount = sizeof(unsigned long int) * 8; /* max 64 bit*/
 	i = bitCount - 1;
@@ -21,8 +25,8 @@ int get_bit(unsigned long int n, unsigned int index)
 	{
 		mask = ui << index;
 		if (n & mask)
-        {
-            return (1);
+		{
+			return (1);
 		}
 		else if (started)
 		{
@@ -34,5 +38,5 @@ int get_bit(unsigned long int n, unsigned int index)
 	{
 		return (0);
 	}
-    return (-1);
+	return (-1);
 }
