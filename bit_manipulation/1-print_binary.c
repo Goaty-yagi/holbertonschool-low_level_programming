@@ -15,9 +15,9 @@ void print_binary(unsigned long int n)
 	bitCount = sizeof(unsigned long int) * 8; /* max 64 bit*/
 	i = bitCount - 1;
 
-	while (i >= 32)
+	while (i >= 0)
 	{/* Set a mask for each bit position. assume mask is 1 concat 0 * n*/
-		mask = 1 << i;
+		mask = (unsigned long int)1 << i;
 		if (n & mask)
 		{				 /* ex) 1100010 & 1000000 will be 1000000 so true */
 			started = 1; /* Turn on the flag once non-zero bit is found */
