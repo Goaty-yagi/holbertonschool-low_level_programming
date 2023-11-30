@@ -9,7 +9,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int d, len, counter;
+	unsigned int d, len, base;
 
 	if (b == NULL)
 	{
@@ -17,7 +17,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 	len = strlen(b);
 	d = 0;
-	counter = 0;
+	base = 1;
 
 	while (len)
 	{
@@ -25,9 +25,9 @@ unsigned int binary_to_uint(const char *b)
 		{
 			if (b[len - 1] == '1')
 			{
-				d = d + pow(2, counter);
+				d = d + base;
 			}
-			counter = counter + 1;
+			base = base * 2;
 			len = len - 1;
 		}
 		else
