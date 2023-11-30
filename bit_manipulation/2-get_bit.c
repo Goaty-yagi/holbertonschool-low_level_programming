@@ -24,7 +24,7 @@ int get_bit(unsigned long int n, unsigned int index)
 		cp_n = cp_n / 2;
 		len_b = len_b + 1;
 	}
-	if (len_b < index)
+	if (len_b < index && ULONG_MAX <= n)
 	{
 		return (-1);
 	}
