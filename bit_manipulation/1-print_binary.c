@@ -8,22 +8,30 @@
 
 void print_binary(unsigned long int n)
 {
-	int binary_num[32], i;
+	int bitCount, i, started;
+	unsigned long int mask;
 
-	i = 0;
+	started = 0;
+	bitCount = sizeof(unsigned long int) * 8; /* max 64 bit*/
+	i = bitCount - 1;
 
-	while (n > 0)
+	while (i >= 0)
 	{
-		/* storing remainder in binary array */
-		binary_num[i] = n % 2;
-		n = n / 2;
-		i = i + 1;
+		mask = (unsigned long int)1 << i; /* Set a mask for each bit position. assume mask is 1 concat 0 * n*/
+		if (n & mask)
+		{				 /* ex) 1100010 & 1000000 will be 1000000 so true */
+			started = 1; /* Turn on the flag once non-zero bit is found */
+			printf("1");
+		}
+		else if (started)
+		{
+			printf("0");
+		}
+		i = i - 1;
 	}
 
-	/* printing binary array in reverse order */
-	while (i - 1 >= 0)
+	if (!started)
 	{
-		printf("%d",binary_num[i - 1]);
-		i = i - 1;
+		printf("0"); /* If the number is zero, print a single 0 */
 	}
 }
