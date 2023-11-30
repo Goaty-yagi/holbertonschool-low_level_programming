@@ -10,17 +10,24 @@
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int bitCount, i, started;
-	unsigned long int mask, ui;
+	int bitCount, i, started, cp_n;
+	unsigned long int mask, ui, len_b;
 
-	if (n >= ULONG_MAX) {
-        return (-1);
-    }
 	started = 0;
 	bitCount = sizeof(unsigned long int) * 8; /* max 64 bit*/
 	i = bitCount - 1;
 	ui = 1;
-
+	len_b = 0;
+	cp_n = n;
+	while (cp_n > 0)
+	{
+		cp_n = cp_n / 2;
+		len_b = len_b + 1;
+	}
+	if (len_b < index)
+	{
+		return (-1);
+	}
 	while (i >= 0)
 	{
 		mask = ui << index;
