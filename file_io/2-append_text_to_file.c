@@ -16,11 +16,10 @@ int append_text_to_file(const char *filename, char *text_content)
 	ssize_t bytes_written;
 	char *c;
 
-	printf("IN FUNC");
 	len = text_content ? strlen(text_content) : 0;
 	c = malloc(len + 1);
 	c[len] = '\0';
-	fd = open(filename, O_RDWR | O_APPEND , S_IRUSR | S_IWUSR);
+	fd = open(filename, O_RDWR | O_APPEND, S_IRUSR | S_IWUSR);
 	if (!c || !filename)
 	{
 		return (-1);
