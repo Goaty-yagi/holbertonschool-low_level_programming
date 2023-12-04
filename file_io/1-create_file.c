@@ -15,8 +15,8 @@ int create_file(const char *filename, char *text_content)
 	int len, fd;
 	ssize_t bytes_written;
 	char *c;
-
-	len = strlen(text_content);
+	
+	len = text_content?strlen(text_content):0;
 	c = malloc(len + 1);
 	c[len] = '\0';
 	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
