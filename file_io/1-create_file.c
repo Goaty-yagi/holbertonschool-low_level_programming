@@ -4,11 +4,11 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * read_textfile - calls read_textfile
+ * create_file - calls create_file
  * @filename: file name
- * @letters: size
+ * @text_content: contents
  *
- * Return: ssize_t
+ * Return: int
  */
 
 int create_file(const char *filename, char *text_content)
@@ -25,7 +25,6 @@ int create_file(const char *filename, char *text_content)
     {
         return (-1);
     }
-    // sz = read(fn, c, len);
     bytes_written = write(1, text_content, len);
     if (bytes_written == -1)
     {
