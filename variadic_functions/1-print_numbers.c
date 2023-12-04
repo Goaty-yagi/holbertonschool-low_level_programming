@@ -9,7 +9,7 @@
  * @n: int
  * @...: rest
  *
- * Return: returns the sum of all its parameters.
+ * Return: void
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)

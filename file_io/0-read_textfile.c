@@ -23,14 +23,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	fd = open(filename, O_RDWR);
-	(void)letters;
 	if (!filename || fd == -1)
 	{
 		return (0);
 	}
 	sz = read(fd, c, letters);
 	c[sz] = '\0';
-	bytes_written = write(STDOUT_FILENO, c, sz);
+	bytes_written = write(1, c, sz);
 	if (bytes_written == -1)
 	{
 		return (0);

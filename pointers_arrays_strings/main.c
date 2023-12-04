@@ -6,27 +6,60 @@
  *
  * Return: Always 0.
  */
+void pprint_array(int *a, int n)
+{
+    int i;
+
+    i = 0;
+    while (i < n)
+    {
+        if (i != 0)
+        {
+            printf(", ");
+        }
+        printf("%d", a[i]);
+        i++;
+    }
+    printf("\n");
+}
+
+void simple_print_buffer(char *buffer, unsigned int size)
+{
+        unsigned int i;
+
+        i = 0;
+        while (i < size)
+        {
+                if (i % 10)
+                {
+                        printf(" ");
+                }
+                if (!(i % 10) && i)
+                {
+                        printf("\n");
+                }
+                printf("0x%02x", buffer[i]);
+                i++;
+        }
+        printf("\n");
+}
+
+int print(int nb)
+{
+        printf("CHECK:%d\n", nb);
+    if (nb < 0) 
+    {
+        printf("MINUS_RETURN:%d\n", nb);
+        return (0);
+    }
+    printf("%d", nb + print(nb - 1));
+    nb --;
+    printf("BEFOR:%d\n", nb);
+    return (nb);
+}
+
 int main(void)
 {
-    char s1[98];
-	char *p;
-	int i;
-
-	for (i = 0; i < 98 - 1; i++)
-		s1[i] = '-';
-	s1[i] = '\0';
-	printf("FIRSR:%s\n", s1);
-	p = _strncpy(s1, "Talk is cheap. Show me the code.\n", 64);
-	printf("%s\n", s1);
-	printf("%s\n", p);
-	for (i = 0; i < 98; i++)
-	{
-		if (i % 10)
-			printf(" ");
-		if (!(i % 10) && i)
-			printf("\n");
-		printf("0x%02x", s1[i]);
-	}
-	printf("\n");
-	return (0);
+    print(4);
+    return (0);
 }

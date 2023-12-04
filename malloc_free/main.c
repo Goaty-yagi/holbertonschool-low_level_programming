@@ -11,23 +11,47 @@
  */
 void simple_print_buffer(char *buffer, unsigned int size)
 {
-    unsigned int i;
+	unsigned int i;
 
-    i = 0;
-    while (i < size)
-    {
-        if (i % 10)
-        {
-            printf(" ");
-        }
-        if (!(i % 10) && i)
-        {
-            printf("\n");
-        }
-        printf("0x%02x", buffer[i]);
-        i++;
-    }
-    printf("\n");
+	i = 0;
+	while (i < size)
+	{
+		if (i % 10)
+		{
+			printf(" ");
+		}
+		if (!(i % 10) && i)
+		{
+			printf("\n");
+		}
+		printf("0x%02x", buffer[i]);
+		i++;
+	}
+	printf("\n");
+}
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+void print_grid(int **grid, int width, int height)
+{
+	int w;
+	int h;
+
+	h = 0;
+	while (h < height)
+	{
+		w = 0;
+		while (w < width)
+		{
+			printf("%d ", grid[h][w]);
+			w++;
+		}
+		printf("\n");
+		h++;
+	}
 }
 
 /**
@@ -37,15 +61,11 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char *buffer;
+	char *pointer;
+	char c[] = "test";
+	pointer = c;
 
-    buffer = create_array(98, 'H');
-    if  (buffer == NULL)
-    {
-        printf("failed to allocate memory\n");
-        return (1);
-    }
-    simple_print_buffer(buffer, 98);
-    free(buffer);
+    printf("%p",pointer);
+    
     return (0);
 }

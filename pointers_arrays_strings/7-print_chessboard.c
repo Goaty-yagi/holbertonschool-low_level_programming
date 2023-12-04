@@ -26,7 +26,7 @@ void print_chessboard(char (*a)[8])
 			a_counter = a_counter + 1;
 		}
 		printf("\n");
-		b_counter++;
+		b_counter = b_counter + 1;
 		a_counter = 0;
 	}
 }
