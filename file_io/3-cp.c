@@ -8,7 +8,7 @@
 int main(int ac, char **av)
 {
 	int fd_from, fd_to, br, bytes_written, BUFFER_SIZE = 1024;
-	char *buffer, *s = "Error: Can't read from file %s\n", cl = "Error: Can't close fd ";
+	char *buffer, *s = "Error: Can't read from file %s\n", *cl = "Error: Can't close fd ";
 
 	if (ac != 3)
 	{
