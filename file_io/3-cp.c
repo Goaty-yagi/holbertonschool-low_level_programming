@@ -8,13 +8,14 @@
 int main(int ac, char **av)
 {
 	int fd_from, fd_to, br, bytes_written, BUFFER_SIZE = 1024;
-	char *buffer, *s = "Error: Can't read from file %s\n", *cl = "Error: Can't close fd ";
+	char *buffer, *s = "Error: Can't read from file %s\n", *cl;
 
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+	cl = "Error: Can't close fd ";
 	buffer = malloc(BUFFER_SIZE);
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from == -1)
