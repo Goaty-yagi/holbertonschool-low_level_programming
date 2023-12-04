@@ -7,8 +7,8 @@
  */
 int main(int ac, char **av)
 {
-	int fd_from, fd_to, bytes_read, bytes_written, BUFFER_SIZE = 1024;
-	char *buffer, *s = "Error: Can't read from file %s\n";
+	int fd_from, fd_to, br, bytes_written, BUFFER_SIZE = 1024;
+	char *buffer, *s = "Error: Can't read from file %s\n", cl = "Error: Can't close fd ";
 
 	if (ac != 3)
 	{
@@ -28,21 +28,21 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	bytes_read = read(fd_from, buffer, BUFFER_SIZE);
-	while (bytes_read > 0)
+	br = read(fd_from, buffer, BUFFER_SIZE);
+	while (br > 0)
 	{
-		bytes_written = write(fd_to, buffer, bytes_read);
-		if (bytes_written != bytes_read)
+		bytes_written = write(fd_to, buffer, br);
+		if (bytes_written != br)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
-		bytes_read = read(fd_from, buffer, BUFFER_SIZE);
+		br = read(fd_from, buffer, BUFFER_SIZE);
 	}
-	if (close(fd_from) == -1 || close(fd_to) == -1 || bytes_read == -1)
+	if (close(fd_from) == -1 || close(fd_to) == -1 || br == -1)
 	{
-		dprintf(STDERR_FILENO, bytes_read == -1 ? s : "Error: Can't close fd ", bytes_read == -1 ? av[1] : '\0');
-		exit(bytes_read == -1 ? 98 : 100);
+		dprintf(STDERR_FILENO, br == -1 ? s : cl, br == -1 ? av[1] : '\0');
+		exit(br == -1 ? 98 : 100);
 	}
 	return (0);
 }
