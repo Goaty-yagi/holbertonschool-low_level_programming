@@ -14,30 +14,24 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int len, fd;
 	ssize_t bytes_written;
-	char *c;
 
 	len = text_content ? strlen(text_content) : 0;
-	c = malloc(len + 1);
-	c[len] = '\0';
 	fd = open(filename, O_RDWR | O_APPEND, S_IRUSR | S_IWUSR);
-	if (!c || !filename)
+	if (!filename)
 	{
 		return (-1);
 	}
 	if (!text_content)
 	{
 		close(fd);
-		free(c);
 		return (1);
 	}
 	bytes_written = write(fd, text_content, len);
 	if (bytes_written == -1)
 	{
 		close(fd);
-		free(c);
 		return (-1);
 	}
 	close(fd);
-	free(c);
 	return (1);
 }
