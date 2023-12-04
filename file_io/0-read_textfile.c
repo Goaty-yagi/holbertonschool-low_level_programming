@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * binary_to_uint - calls binary_to_uint
+ * read_textfile - calls read_textfile
  * @filename: file name
  * @letters: size
  *
