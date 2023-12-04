@@ -1,4 +1,8 @@
 #include "main.h"
+#include <errno.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
 /**
  * create_file - calls create_file
  * @filename: file name
