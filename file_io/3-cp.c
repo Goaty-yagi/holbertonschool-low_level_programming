@@ -8,7 +8,7 @@
  */
 int main(int ac, char **av)
 {
-	int fd_from, fd_to, bytes_read,BUFFER_SIZE = 1024;
+	int fd_from, fd_to, bytes_read, bytes_written,BUFFER_SIZE = 1024;
 	char *buffer;
 
 	if (ac != 3)
@@ -31,9 +31,15 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
+	bytes_read = read(fd_from, buffer, BUFFER_SIZE);
+	while (bytes_read > 0)
 	{
-		write(fd_to, buffer, bytes_read);
+		bytes_written = write(fd_to, buffer, bytes_read);
+		if (bytes_written != bytes_read)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
+		}
 		bytes_read = read(fd_from, buffer, BUFFER_SIZE);
 	}
 	if (bytes_read == -1)
