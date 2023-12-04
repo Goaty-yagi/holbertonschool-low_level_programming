@@ -1,8 +1,4 @@
 #include "main.h"
-#include <errno.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <unistd.h>
 /**
  * create_file - calls create_file
  * @filename: file name
@@ -10,7 +6,6 @@
  *
  * Return: int
  */
-
 int create_file(const char *filename, char *text_content)
 {
 	int len, fd;
@@ -24,6 +19,10 @@ int create_file(const char *filename, char *text_content)
 	if (!c || !filename)
 	{
 		return (-1);
+	}
+	if (!text_content)
+	{
+		return (1);
 	}
 	bytes_written = write(fd, text_content, len);
 	if (bytes_written == -1)
