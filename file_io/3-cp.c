@@ -4,49 +4,70 @@
 
 /**
  * main - check the code
- *
+ * @ac: ac
+ * @av: av
+ * 
  * Return: Always 0.
  */
 int main(int ac, char **av)
 {
-    int sz, file_from, file_to, bytes_written, buf_size;
-    char *c;
-    if (ac != 3)
-    {
-        dprintf(2, "Usage: cp file_from file_to\n");
-        exit(97);
-    }
-    if (!av[1])
-    {
-        dprintf(2, "Error: Can't read from file %s\n", av[1]);
-        exit(98);
-    }
-    file_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 664);
-    file_from = open(av[1], O_RDONLY | O_CREAT | O_TRUNC, 664);
-    buf_size = 1024;
-    c = malloc(buf_size);
-    if (!c)
-    {
-        return (1);
-    }
-    while ((sz = read(file_from, c, buf_size)) > 0)
-    {
-        bytes_written = write(file_to, c, sz);
-        if (bytes_written != sz)
-        {
-            dprintf(2, "Error: Can't write to %s\n", av[2]);
-            exit(99);
-        }
-    }
-    if (close(file_to) == -1)
-    {
-        dprintf(2, "Error: Can't close %d\n", file_to);
-        exit(100);
-    }
-    if (close(file_from) == -1)
-    {
-        dprintf(2, "Error: Can't close %d\n", file_from);
-        exit(100);
-    }
-    return (0);
+	ssize_t bytes_read, bytes_written;
+	int BUFFER_SIZE = 1024;
+	int fd_from;
+	int fd_to;
+	char *file_from;
+	char *file_to;
+	char *buffer;
+
+	if (ac != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", av[0]);
+		exit(97);
+	}
+
+	file_from = av[1];
+	file_to = av[2];
+	buffer = malloc(BUFFER_SIZE);
+	if (!buffer)
+	{
+		return (1);
+	}
+	fd_from = open(file_from, O_RDONLY);
+	if (fd_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
+	if (fd_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+		exit(99);
+	}
+	bytes_read = read(fd_from, buffer, BUFFER_SIZE);
+	while (bytes_read > 0)
+	{
+		bytes_written = write(fd_to, buffer, bytes_read);
+		if (bytes_written != bytes_read)
+		{
+			dprintf(STDERR_FILENO, "Error: Incomplete write to %s\n", file_to);
+			exit(99);
+		}
+		bytes_read = read(fd_from, buffer, BUFFER_SIZE);
+	}
+
+	if (bytes_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+
+	if (close(fd_from) == -1 || close(fd_to) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
+		exit(100);
+	}
+
+	return 0;
 }
