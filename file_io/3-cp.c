@@ -3,13 +3,12 @@
  * main - check the code
  * @ac: ac
  * @av: av
- *
  * Return: Always 0.
  */
 int main(int ac, char **av)
 {
-	int fd_from, fd_to, bytes_read, bytes_written,BUFFER_SIZE = 1024;
-	char *buffer;
+	int fd_from, fd_to, bytes_read, bytes_written, BUFFER_SIZE = 1024;
+	char *buffer, *s = "Error: Can't read from file %s\n";
 
 	if (ac != 3)
 	{
@@ -17,12 +16,10 @@ int main(int ac, char **av)
 		exit(97);
 	}
 	buffer = malloc(BUFFER_SIZE);
-	if (!buffer)
-		return (1);
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDERR_FILENO, s, av[1]);
 		exit(98);
 	}
 	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -42,15 +39,10 @@ int main(int ac, char **av)
 		}
 		bytes_read = read(fd_from, buffer, BUFFER_SIZE);
 	}
-	if (bytes_read == -1)
+	if (close(fd_from) == -1 || close(fd_to) == -1 || bytes_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
+		dprintf(STDERR_FILENO, bytes_read == -1 ? s : "Error: Can't close fd ", bytes_read == -1 ? av[1] : '\0');
+		exit(bytes_read == -1 ? 98 : 100);
 	}
-	if (close(fd_from) == -1 || close(fd_to) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd ");
-		exit(100);
-	}
-	return 0;
+	return (0);
 }
