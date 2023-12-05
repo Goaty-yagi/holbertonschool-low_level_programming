@@ -16,6 +16,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 
-	ht = malloc((size + 1) * sizeof(hash_table_t));
+	ht = malloc(size  * sizeof(hash_table_t) / 2 + sizeof(hash_table_t));
 	return (ht);
 }
