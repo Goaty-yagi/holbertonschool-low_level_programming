@@ -28,6 +28,7 @@ void hash_table_delete(hash_table_t *ht)
 			counter = counter + 1;
 		}
 		free(ht->array);
+		free(*ht->array);
 		free(ht);
 	}
 }
