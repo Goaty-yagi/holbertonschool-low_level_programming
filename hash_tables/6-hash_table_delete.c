@@ -21,14 +21,17 @@ void hash_table_delete(hash_table_t *ht)
 			{
 				if (ht->array[counter]->next)
 				{
+					free(ht->array[counter]->next->key);
+					free(ht->array[counter]->next->value);
 					free(ht->array[counter]->next);
 				}
+				free(ht->array[counter]->key);
+				free(ht->array[counter]->value);
 				free(ht->array[counter]);
 			}
 			counter = counter + 1;
 		}
 		free(ht->array);
-		free(*ht->array);
 		free(ht);
 	}
 }
