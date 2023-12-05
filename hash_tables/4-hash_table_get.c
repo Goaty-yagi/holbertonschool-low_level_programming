@@ -12,8 +12,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	unsigned long int counter;
 
+	if (!ht)
+	{
+		return (NULL);
+	}
 	counter = 0;
-	(void)key;
 	while (counter < ht->size)
 	{
 		if (ht->array[counter])
