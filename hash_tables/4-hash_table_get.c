@@ -26,7 +26,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 			{
 				if (strcmp(ht->array[counter]->next->key, key) == 0)
 				{
-					return (ht->array[counter]->value);
+					return (ht->array[counter]->next->value);
 				}
 			}
 		}
