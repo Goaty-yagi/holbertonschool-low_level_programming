@@ -30,6 +30,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(ht->array[index]->key, node->key) == 0)
 		{
+			free(ht->array[index]);
 			ht->array[index] = node;
 		}
 		else
