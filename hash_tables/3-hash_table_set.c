@@ -12,14 +12,13 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node, *temp;
-	unsigned long int index, is_found;
+	unsigned long int index;
 
 	node = malloc(sizeof(hash_node_t));
 	if (!node || !key || !ht)
 	{
 		return (0);
 	}
-	is_found = 0;
 	index = key_index((const unsigned char *)key, ht->size);
 	node->key = strdup(key);
 	node->value = strdup(value);
