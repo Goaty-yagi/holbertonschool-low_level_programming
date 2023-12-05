@@ -22,7 +22,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 	}
 	ht->size = size;
-	ht->array = malloc(8);
+	ht->array = malloc(8 * size);
 	if (!ht->array)
 	{
 		return (NULL);
