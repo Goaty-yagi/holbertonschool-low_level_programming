@@ -14,11 +14,12 @@ void hash_table_print(const hash_table_t *ht)
 
 	counter = init_print = 0;
 
-	if (!ht)
+
+	if (!ht && ht != NULL)
 	{
 		printf("{}\n");
 	}
-	else
+	else if (ht != NULL)
 	{
 		printf("{");
 		while (counter < ht->size)
