@@ -11,7 +11,7 @@ void hash_table_delete(hash_table_t *ht)
 {
 	unsigned long int counter;
 	hash_node_t *node, *temp;
-	
+
 	counter = 0;
 
 	if (ht != NULL)
