@@ -55,3 +55,27 @@ ex)Searching item in BST
 - Disadvantages: May not be the most efficient for certain tasks.
 
 ## 5, What is the term Space Complexity
+
+Space complexity is a term used in computer science to describe the amount of memory (space) an algorithm or a program requires in relation to the input size. It measures the efficiency of an algorithm in terms of the additional memory it needs to execute based on the size of the input.
+
+Space complexity is often expressed using big O notation, similar to time complexity. The notation describes the upper bound of the space used by an algorithm as a function of the input size. For example, if an algorithm has a space complexity of O(1), it means the amount of additional memory it uses remains constant, regardless of the input size. If the space complexity is O(n), the additional memory required grows linearly with the input size.
+
+### O(1) - Constant Space:
+- The algorithm's space requirements remain constant, regardless of the input size.
+
+### O(log n) - Logarithmic Space:
+- The space requirements grow logarithmically with the input size.
+
+### O(n) - Linear Space:
+- The space requirements grow linearly with the input size.
+
+### O(n log n) - Linearithmic Space:
+- The space requirements grow in proportion to n log n, where n is the input size.
+
+### O(n^2), O(n^3), ... - Polynomial Space:
+- The space requirements grow as a polynomial function of the input size.
+
+### O(2^n) - Exponential Space:
+- The space requirements grow exponentially with the input size.
+
+If you don't use malloc or something to allocate memory, it might be O(1).
