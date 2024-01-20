@@ -47,34 +47,39 @@ int binary_search(int *array, size_t size, int value)
 {
 	int EXIT_CODE = -1;
 	int reached;
-	int right_index, left_index, int_size = (int)size;
+	int right_index, left_index;
 
 	if (array == NULL)
 		return (EXIT_CODE);
 
-	right_index = int_size - 1;
+	right_index = (int)size - 1;
 	left_index = reached = 0;
-
+	print_array(array, left_index, right_index);
 	while (1)
 	{
-		print_array(array, left_index, right_index);
-		if (reached)
-			break;
 		if (array[(right_index + left_index) / 2] > value)
 			right_index = (right_index + left_index) / 2 - 1;
 		else
 			left_index = (right_index + left_index) / 2 + 1;
-
+		print_array(array, left_index, right_index);
 		if (array[left_index] == value)
 		{
-			reached = 1;
 			EXIT_CODE = left_index;
+			if (right_index - left_index < 2)
+				reached = 1;
+			else
+			{
+				right_index = left_index;
+				left_index -= 1;
+			}
 		}
 		else if (right_index - left_index == 0)
 		{
 			reached = 1;
 			EXIT_CODE = -1;
 		}
+		if (reached)
+			break;
 	}
 	return (EXIT_CODE);
 }
